@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeAnimations();
     initializeSmoothScrolling();
     initializeBrokenLinkHandler();
+    initializeContactTracking();
 });
 
 // Initialize skills section
@@ -101,7 +102,7 @@ function initializeProjects() {
     const projectsData = [
         {
             name: 'ReelsPro - AI Video Platform',
-            image: './assets/projects/reelspro.png',
+            image: './assets/projects/extension.png',
             description: 'HackSRIT\'25 Winner - AI-powered short video platform with content moderation',
             featured: true,
             hackathon: 'HackSRIT\'25 - 1st Prize Winner (15,000 INR)',
@@ -215,6 +216,26 @@ function initializeSmoothScrolling() {
             }
         });
     });
+}
+
+// Scroll to section function for navigation buttons
+function scrollToSection(sectionId) {
+    const target = document.getElementById(sectionId);
+    if (target) {
+        target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+        
+        // Track navigation clicks
+        if (window.portfolioCounter) {
+            if (sectionId === 'featured-project') {
+                window.portfolioCounter.trackProjectClick();
+            } else if (sectionId === 'contact') {
+                window.portfolioCounter.trackContactClick();
+            }
+        }
+    }
 }
 
 // Open project detail pages
@@ -582,3 +603,28 @@ document.addEventListener('keydown', function(e) {
         closeBrokenLinkModal();
     }
 });
+
+// Initialize contact tracking
+function initializeContactTracking() {
+    // Track contact button clicks
+    const contactButtons = document.querySelectorAll('.cs-button, .cs-social-links-container a');
+    
+    contactButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            if (window.portfolioCounter) {
+                window.portfolioCounter.trackContactClick();
+            }
+        });
+    });
+    
+    // Track project detail clicks
+    const projectButtons = document.querySelectorAll('button[onclick*="openProjectPage"], .demo-btn, .github-btn, .video-btn, .docs-btn');
+    
+    projectButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            if (window.portfolioCounter) {
+                window.portfolioCounter.trackProjectClick();
+            }
+        });
+    });
+}
