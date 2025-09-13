@@ -1,0 +1,614 @@
+/* PROJECT CARDS */
+.card {
+  overflow: visible;
+  width: 230px;
+  height: 300px;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 300ms;
+  box-shadow: 0px 0px 10px 1px #000000ee;
+  border-radius: 5px;
+}
+
+.front,
+.back {
+  background-color: #151515;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.back {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.back::before {
+  position: absolute;
+  content: ' ';
+  display: block;
+  width: 160px;
+  height: 160%;
+  background: linear-gradient(90deg, transparent, var(--secondary-color), var(--secondary-color), var(--secondary-color), var(--secondary-color), transparent);
+  animation: rotation_481 5000ms infinite linear;
+}
+
+.back-content {
+  position: absolute;
+  width: 99%;
+  height: 99%;
+  background-color: #151515;
+  border-radius: 70px;
+  color: var(--tertiary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+@keyframes rotation_481 {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.front {
+  transform: rotateY(180deg);
+  color: var(--tertiary-color);
+}
+
+.front .front-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.front-content .badge {
+  background-color: #00000055;
+  padding: 2px 10px;
+  border-radius: 10px;
+  backdrop-filter: blur(2px);
+  width: fit-content;
+}
+
+.description {
+  box-shadow: 0px 0px 10px 5px #00000088;
+  width: 100%;
+  padding: 10px;
+  background-color: #00000099;
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+}
+
+.title {
+  font-size: 11px;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title p {
+  width: 50%;
+}
+
+.card-footer {
+  color: #ffffff88;
+  margin-top: 5px;
+  font-size: 8px;
+}
+
+.front .img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #ffbb66;
+  position: relative;
+  filter: blur(15px);
+  animation: floating 2600ms infinite linear;
+}
+
+#bottom {
+  background-color: #ff8866;
+  left: 50px;
+  top: 0px;
+  width: 150px;
+  height: 150px;
+  animation-delay: -800ms;
+}
+
+#right {
+  background-color: #ff2233;
+  left: 160px;
+  top: -80px;
+  width: 30px;
+  height: 30px;
+  animation-delay: -1800ms;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.back-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  display: block;
+}
+
+/* SKILL CARDS */
+.m2 {
+  position: relative;
+  width: 20vmin;
+  height: 20vmin;
+  background: linear-gradient(135deg, #1e1e24 10%, #050505 60%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  animation: gradient-shift 5s ease-in-out infinite;
+  background-size: 200% 200%;
+}
+
+.m2 .logo {
+  display: inline-block;
+  vertical-align: baseline;
+  user-select: none;
+  font-size: 5vmin;
+  color: var(--tertiary-color);
+  background-image: linear-gradient(to right, #626262, #fff);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-weight: bold;
+}
+
+.m2 .logo svg {
+  margin-right: -1vmin;
+  width: 5vmin;
+  height: 5vmin;
+}
+
+.m2::before,
+.m2::after {
+  --size: 5px;
+  content: "";
+  position: absolute;
+  top: calc(var(--size) / -2);
+  left: calc(var(--size) / -2);
+  width: calc(100% + var(--size));
+  height: calc(100% + var(--size));
+  background: radial-gradient(circle at 0 0, hsl(27deg 93% 60%), transparent),
+    radial-gradient(circle at 100% 0, #00a6ff, transparent),
+    radial-gradient(circle at 0 100%, #ff0056, transparent),
+    radial-gradient(circle at 100% 100%, #6500ff, transparent);
+}
+
+.m2::after {
+  --size: 2px;
+  z-index: -1;
+}
+
+.m2::before {
+  --size: 10px;
+  z-index: -2;
+  filter: blur(2vmin);
+  animation: blur-animation 3s ease-in-out alternate infinite;
+}
+
+@keyframes blur-animation {
+  to {
+    filter: blur(3vmin);
+    transform: scale(1.05);
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* EXPERIENCE STEPPER */
+.stepper-box {
+  background-color: var(--primary-color);
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  color: var(--tertiary-color);
+}
+
+.stepper-step {
+  display: flex;
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.stepper-step:last-child {
+  margin-bottom: 0;
+}
+
+.stepper-line {
+  position: absolute;
+  left: 19px;
+  top: 40px;
+  bottom: -32px;
+  width: 2px;
+  background-color: #e2e8f0;
+  z-index: 1;
+}
+
+.stepper-step:last-child .stepper-line {
+  display: none;
+}
+
+.stepper-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+  z-index: 2;
+}
+
+.stepper-circle svg {
+  background-color: transparent;
+}
+
+.stepper-completed .stepper-circle {
+  background-color: var(--secondary-color);
+  color: var(--tertiary-color);
+}
+
+.stepper-active .stepper-circle {
+  border: 2px solid #0f172a;
+  color: #0f172a;
+}
+
+.stepper-pending .stepper-circle {
+  border: 2px solid #e2e8f0;
+  color: #94a3b8;
+}
+
+.stepper-content {
+  flex: 1;
+}
+
+.stepper-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.stepper-completed .stepper-title {
+  color: var(--tertiary-color);
+}
+
+.stepper-active .stepper-title {
+  color: #0f172a;
+}
+
+.stepper-pending .stepper-title {
+  color: #94a3b8;
+}
+
+.stepper-status {
+  font-size: 13px;
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  margin-top: 4px;
+}
+
+.stepper-completed .stepper-status {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.stepper-active .stepper-status {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+}
+
+.stepper-pending .stepper-status {
+  background-color: #f1f5f9;
+  color: #64748b;
+}
+
+.stepper-time {
+  font-size: 12px;
+  color: #94a3b8;
+  margin-top: 4px;
+}
+
+.stepper-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+
+.stepper-button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  background-color: var(--tertiary-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.stepper-button-primary {
+  background-color: #0f172a;
+  color: var(--tertiary-color);
+  border-color: #0f172a;
+}
+
+.stepper-job {
+  background-color: #dbeafe !important;
+  color: #1d4ed8 !important;
+}
+
+/* CONTACT CARD */
+.cs-card {
+  width: 280px;
+  height: 300px;
+  background: var(--tertiary-color);
+  border-radius: 32px;
+  padding: 10px;
+  position: relative;
+  box-shadow: #604b4a30 0px 70px 30px -50px;
+  transition: all 0.5s ease-in-out;
+}
+
+.cs-card .cs-mail {
+  position: absolute;
+  right: 2rem;
+  top: 1.4rem;
+  background: transparent;
+  border: none;
+}
+
+.cs-card .cs-mail svg {
+  stroke: var(--primary-color);
+  stroke-width: 3px;
+}
+
+.cs-card .cs-mail svg:hover {
+  stroke: #f55d56;
+}
+
+.cs-card .cs-profile-pic {
+  position: absolute;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  top: 3px;
+  left: 3px;
+  border-radius: 29px;
+  z-index: 1;
+  border: 0px solid var(--primary-color);
+  overflow: hidden;
+  transition: all 0.5s ease-in-out 0.2s, z-index 0.5s ease-in-out 0.2s;
+}
+
+.cs-card .cs-profile-pic img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  -o-object-position: 0px 0px;
+  object-position: 0px 0px;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.cs-card .cs-profile-pic svg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: 0px 0px;
+  object-position: 0px 0px;
+  transform-origin: 45% 20%;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.cs-card .cs-bottom {
+  position: absolute;
+  bottom: 3px;
+  left: 3px;
+  right: 3px;
+  background: var(--primary-color);
+  top: 80%;
+  border-radius: 29px;
+  z-index: 2;
+  box-shadow: rgba(96, 75, 74, 0.1882352941) 0px 5px 5px 0px inset;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+.cs-card .cs-bottom .cs-content {
+  position: absolute;
+  bottom: 0;
+  left: 1.5rem;
+  right: 1.5rem;
+  height: 230px;
+}
+
+.cs-card .cs-bottom .cs-content .cs-name {
+  display: block;
+  font-size: 1.2rem;
+  color: var(--tertiary-color);
+  font-weight: bold;
+}
+
+.cs-card .cs-bottom .cs-content .cs-about-me {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--tertiary-color);
+  margin-top: 1rem;
+}
+
+.cs-card .cs-bottom .cs-bottom-bottom {
+  position: absolute;
+  bottom: 1rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cs-card .cs-bottom .cs-bottom-bottom .cs-social-links-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.cs-card .cs-bottom .cs-bottom-bottom .cs-social-links-container svg {
+  height: 20px;
+  fill: var(--tertiary-color);
+  filter: drop-shadow(0 5px 5px rgba(165, 132, 130, 0.1333333333));
+}
+
+.cs-card .cs-bottom .cs-bottom-bottom .cs-social-links-container svg:hover {
+  fill: #f55d56;
+  transform: scale(1.2);
+}
+
+.cs-card .cs-bottom .cs-bottom-bottom .cs-button {
+  background: var(--tertiary-color);
+  color: var(--primary-color);
+  border: none;
+  border-radius: 20px;
+  font-size: 0.6rem;
+  padding: 0.4rem 0.6rem;
+  box-shadow: rgba(165, 132, 130, 0.1333333333) 0px 5px 5px 0px;
+}
+
+.cs-card .cs-bottom .cs-bottom-bottom .cs-button:hover {
+  background: #f55d56;
+  color: var(--tertiary-color);
+}
+
+.cs-card:hover {
+  border-top-left-radius: 55px;
+}
+
+.cs-card:hover .cs-bottom {
+  top: 20%;
+  border-radius: 80px 29px 29px 29px;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+}
+
+.cs-card:hover .cs-profile-pic:hover {
+  transform: scale(1.3);
+  border-radius: 0px;
+}
+
+.cs-card:hover .cs-profile-pic img {
+  transform: scale(2.5);
+  -o-object-position: 0px 25px;
+  object-position: 0px 25px;
+  transition: all 0.5s ease-in-out 0.5s;
+}
+
+.cs-card:hover .cs-profile-pic svg {
+  transform: scale(2.5);
+  transition: all 0.5s ease-in-out 0.5s;
+}
+
+.h-wrapper {
+  background-color: var(--tertiary-color);
+  display: flex;
+  justify-content: center;
+  border-radius: 32px;
+  margin-bottom: 15px;
+}
+
+.h-wrapper h2{
+  background-color: transparent;
+}
+
+.cs-background{
+  border-radius: 32px;
+  background-color: var(--tertiary-color);
+}
+
+.p-box {
+  background-color: rgb(247, 243, 243);
+  height: 45px;
+  border-radius: 80px 29px 80px 29px;
+  margin: 0px 32px 0px 32px;
+  box-shadow: 20px 20px 60px #bebebe,
+    -20px -20px 60px #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.p-box p{
+  font-size: 15px;
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.p-box svg{
+  width: 20px;
+  background-color: transparent;
+}
+
+.info-wrapper{
+  background-color: var(--tertiary-color);
+}
+
+.cs-button b{
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.cs-button b:hover{
+  background-color: var(--secondary-color);
+}
