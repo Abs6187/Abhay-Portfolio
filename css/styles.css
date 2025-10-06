@@ -10,7 +10,7 @@ html {
   text-decoration: none;
   color: #fff;
   font-family: "Poppins", sans-serif;
-  scroll-behavior: smooth; 
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -60,12 +60,13 @@ button {
 .hero h1 {
   font-size: 3rem;
   max-width: 700px;
+  color: var(--secondary-color);
 }
 
-.hero p {
-  font-size: 3.0rem;
+.hero h2 {
+  font-size: 1.5rem;
   color: var(--tertiary-color);
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .profile-img {
@@ -181,6 +182,11 @@ h2 {
   background: #2d2d2d;
 }
 
+#contact .project-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 /* MOBILE */
 @media screen and (max-width: 768px) {
   .hero h1 {
@@ -247,7 +253,7 @@ h2 {
   .header-wrapper{
     margin-bottom:45px;
   }
-  
+
   .header-wrapper nav {
     flex-direction: column;
     gap: 10px;
@@ -260,6 +266,8 @@ h2 {
 
 .portfolio-h {
   background-color: var(--secondary-color);
+  font-size: 1.17em;
+  font-weight: bold;
 }
 
 .ul-div {
@@ -272,7 +280,7 @@ h2 {
 }
 
 .desc-work{
-  color: var(--tertiary-color); 
+  color: var(--tertiary-color);
   margin-bottom:10px
 }
 
@@ -516,25 +524,25 @@ h2 {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .featured-project-image img,
   .project-placeholder {
     width: 250px;
     height: 150px;
   }
-  
+
   .placeholder-content h4 {
     font-size: 1.5rem;
   }
-  
+
   .featured-project-info h3 {
     font-size: 2rem;
   }
-  
+
   .project-links {
     justify-content: center;
   }
-  
+
   .tech-stack {
     justify-content: center;
   }
@@ -592,15 +600,15 @@ h2 {
         padding: 15px;
         margin-bottom: 20px;
     }
-    
+
     .stat-item {
         padding: 10px;
     }
-    
+
     .stat-number {
         font-size: 1.5rem;
     }
-    
+
     .stat-label {
         font-size: 0.8rem;
     }
@@ -611,7 +619,7 @@ h2 {
         grid-template-columns: 1fr;
         gap: 10px;
     }
-    
+
     .stat-number {
         font-size: 1.3rem;
     }
