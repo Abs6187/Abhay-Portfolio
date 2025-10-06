@@ -507,7 +507,7 @@
 }
 
 .cs-card .cs-bottom .cs-bottom-bottom .cs-social-links-container svg {
-  height: 20px;
+  height: 24px;
   fill: var(--tertiary-color);
   filter: drop-shadow(0 5px 5px rgba(165, 132, 130, 0.1333333333));
 }
@@ -525,6 +525,7 @@
   font-size: 0.6rem;
   padding: 0.4rem 0.6rem;
   box-shadow: rgba(165, 132, 130, 0.1333333333) 0px 5px 5px 0px;
+  text-decoration: none;
 }
 
 .cs-card .cs-bottom .cs-bottom-bottom .cs-button:hover {
@@ -569,6 +570,7 @@
 
 .h-wrapper h2{
   background-color: transparent;
+  color: var(--primary-color);
 }
 
 .cs-background{
