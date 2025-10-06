@@ -120,12 +120,21 @@ function showToast(message, duration = 3000) {
 
 // Smooth scroll to section
 function scrollToSection(sectionId) {
-    const section = document.getElementById(sectionId);
-    if (section) {
-        section.scrollIntoView({
+    const target = document.getElementById(sectionId);
+    if (target) {
+        target.scrollIntoView({
             behavior: 'smooth',
             block: 'start'
         });
+
+        // Track navigation clicks
+        if (window.portfolioCounter) {
+            if (sectionId === 'featured-project') {
+                window.portfolioCounter.trackProjectClick();
+            } else if (sectionId === 'contact') {
+                window.portfolioCounter.trackContactClick();
+            }
+        }
     }
 }
 

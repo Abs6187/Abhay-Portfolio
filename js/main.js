@@ -141,7 +141,7 @@ function initializeProjects() {
     projectsData.forEach(project => {
         // Skip featured project as it has its own section
         if (project.featured) return;
-        
+
         const projectItem = document.createElement('li');
         projectItem.innerHTML = `
             <div class="card">
@@ -218,26 +218,6 @@ function initializeSmoothScrolling() {
     });
 }
 
-// Scroll to section function for navigation buttons
-function scrollToSection(sectionId) {
-    const target = document.getElementById(sectionId);
-    if (target) {
-        target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
-        
-        // Track navigation clicks
-        if (window.portfolioCounter) {
-            if (sectionId === 'featured-project') {
-                window.portfolioCounter.trackProjectClick();
-            } else if (sectionId === 'contact') {
-                window.portfolioCounter.trackContactClick();
-            }
-        }
-    }
-}
-
 // Open project detail pages
 function openProjectPage(projectName) {
     const projectPages = {
@@ -248,7 +228,7 @@ function openProjectPage(projectName) {
         'JARVIS AI Assistant': 'project-jarvis.html',
         'Machine Learning Projects': 'project-ml.html'
     };
-    
+
     const pagePath = projectPages[projectName];
     if (pagePath) {
         window.open(pagePath, '_blank');
@@ -350,15 +330,15 @@ function showProjectDetails(projectName) {
         });
 
         let detailsText = `${projectName}\n\n${project.description}\n\nTechnologies: ${project.technologies}`;
-        
+
         if (project.team) {
             detailsText += `\n\nTeam: ${project.team}`;
         }
-        
+
         if (project.achievements) {
             detailsText += `\n\nAchievements: ${project.achievements}`;
         }
-        
+
         detailsText += `\n\nLinks:\n${linksHtml}`;
 
         alert(detailsText);
@@ -390,15 +370,15 @@ window.addEventListener('resize', debounce(() => {
 function initializeBrokenLinkHandler() {
     // Create modal for broken links
     createBrokenLinkModal();
-    
+
     // Add event listeners to all external links
     const externalLinks = document.querySelectorAll('a[href^="http"]:not([href*="github.com"]):not([href*="linkedin.com"]):not([href*="linktr.ee"]):not([href*="huggingface.co"]):not([href*="vercel.app"])');
-    
+
     externalLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             // Check if link might be broken (you can customize this logic)
             const href = this.getAttribute('href');
-            
+
             // Show under construction for broken or placeholder links
             if (href.includes('placeholder') || href.includes('coming-soon') || href.includes('under-construction') || href.includes('broken-link')) {
                 e.preventDefault();
@@ -427,10 +407,10 @@ function createBrokenLinkModal() {
             </div>
         </div>
     `;
-    
+
     // Add modal to body
     document.body.insertAdjacentHTML('beforeend', modalHTML);
-    
+
     // Add CSS styles
     addBrokenLinkStyles();
 }
@@ -450,7 +430,7 @@ function addBrokenLinkStyles() {
             align-items: center;
             justify-content: center;
         }
-        
+
         .broken-link-overlay {
             position: absolute;
             top: 0;
@@ -460,7 +440,7 @@ function addBrokenLinkStyles() {
             background: rgba(0, 0, 0, 0.8);
             backdrop-filter: blur(10px);
         }
-        
+
         .broken-link-content {
             position: relative;
             background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
@@ -473,7 +453,7 @@ function addBrokenLinkStyles() {
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
             animation: modalSlideIn 0.3s ease-out;
         }
-        
+
         @keyframes modalSlideIn {
             from {
                 opacity: 0;
@@ -484,39 +464,39 @@ function addBrokenLinkStyles() {
                 transform: translateY(0) scale(1);
             }
         }
-        
+
         .broken-link-animation {
             margin-bottom: 30px;
         }
-        
+
         .construction-gif {
             max-width: 200px;
             height: auto;
             border-radius: 15px;
             box-shadow: 0 10px 20px rgba(255, 69, 0, 0.3);
         }
-        
+
         .broken-link-content h2 {
             color: #FF4500;
             font-size: 2rem;
             margin-bottom: 15px;
             font-weight: 700;
         }
-        
+
         .broken-link-content p {
             color: #ccc;
             font-size: 1.1rem;
             line-height: 1.6;
             margin-bottom: 30px;
         }
-        
+
         .broken-link-actions {
             display: flex;
             gap: 15px;
             justify-content: center;
             flex-wrap: wrap;
         }
-        
+
         .broken-link-btn {
             padding: 12px 25px;
             border: none;
@@ -527,48 +507,48 @@ function addBrokenLinkStyles() {
             cursor: pointer;
             font-size: 1rem;
         }
-        
+
         .broken-link-btn.primary {
             background: linear-gradient(45deg, #FF4500, #FF6347);
             color: white;
         }
-        
+
         .broken-link-btn.secondary {
             background: linear-gradient(45deg, #2196F3, #21CBF3);
             color: white;
         }
-        
+
         .broken-link-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(255, 69, 0, 0.4);
         }
-        
+
         .broken-link-btn.secondary:hover {
             box-shadow: 0 5px 15px rgba(33, 150, 243, 0.4);
         }
-        
+
         @media (max-width: 768px) {
             .broken-link-content {
                 padding: 30px 20px;
                 margin: 20px;
             }
-            
+
             .broken-link-content h2 {
                 font-size: 1.5rem;
             }
-            
+
             .broken-link-actions {
                 flex-direction: column;
                 align-items: center;
             }
-            
+
             .broken-link-btn {
                 width: 100%;
                 max-width: 200px;
             }
         }
     `;
-    
+
     document.head.appendChild(style);
 }
 
@@ -608,7 +588,7 @@ document.addEventListener('keydown', function(e) {
 function initializeContactTracking() {
     // Track contact button clicks
     const contactButtons = document.querySelectorAll('.cs-button, .cs-social-links-container a');
-    
+
     contactButtons.forEach(button => {
         button.addEventListener('click', function() {
             if (window.portfolioCounter) {
@@ -616,10 +596,10 @@ function initializeContactTracking() {
             }
         });
     });
-    
+
     // Track project detail clicks
     const projectButtons = document.querySelectorAll('button[onclick*="openProjectPage"], .demo-btn, .github-btn, .video-btn, .docs-btn');
-    
+
     projectButtons.forEach(button => {
         button.addEventListener('click', function() {
             if (window.portfolioCounter) {
