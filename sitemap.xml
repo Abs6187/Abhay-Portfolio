@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    <!-- Main Homepage -->
+    <url>
+        <loc>https://abs6187.github.io/Abhay-Portfolio/</loc>
+        <lastmod>2025-11-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Main Index Page -->
+    <url>
+        <loc>https://abs6187.github.io/Abhay-Portfolio/index.html</loc>
+        <lastmod>2025-11-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Project Pages -->
+    <url>
+        <loc>https://abs6187.github.io/Abhay-Portfolio/project-reelspro.html</loc>
+        <lastmod>2025-11-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://abs6187.github.io/Abhay-Portfolio/project-agentx.html</loc>
+        <lastmod>2025-11-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://abs6187.github.io/Abhay-Portfolio/project-helmet-detection.html</loc>
+        <lastmod>2025-11-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://abs6187.github.io/Abhay-Portfolio/project-edupath.html</loc>
+        <lastmod>2025-11-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://abs6187.github.io/Abhay-Portfolio/project-jarvis.html</loc>
+        <lastmod>2025-11-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://abs6187.github.io/Abhay-Portfolio/project-ml.html</loc>
+        <lastmod>2025-11-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- LLMs.txt for AI Indexing -->
+    <url>
+        <loc>https://abs6187.github.io/Abhay-Portfolio/llms.txt</loc>
+        <lastmod>2025-11-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Assets (key images for SEO) -->
+    <url>
+        <loc>https://abs6187.github.io/Abhay-Portfolio/assets/Profile_Photo.jpg</loc>
+        <lastmod>2025-11-01</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+</urlset>
