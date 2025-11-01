@@ -6,7 +6,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://abs6187.github.io/Abhay-Portfolio/sitemap.xml
+Sitemap: https://www.abhaygupta6187.me/sitemap.xml
 
 # LLM-specific indexing file
 # This helps AI bots better understand and index the content
@@ -82,8 +82,9 @@ Allow: /sitemap.xml
 # (This is a portfolio site meant to be fully indexed)
 
 # Host (optional, but recommended for clarity)
-Host: https://abs6187.github.io
+Host: https://www.abhaygupta6187.me/
 
 # Note for AI bots and crawlers:
 # For comprehensive site information optimized for LLMs, see /llms.txt
 # This file contains structured data about the portfolio, projects, and skills
+
