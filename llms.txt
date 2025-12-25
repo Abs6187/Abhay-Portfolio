@@ -8,7 +8,7 @@
 > Type: Personal Portfolio / Professional Website
 > Primary Language: English
 > Technologies: HTML5, CSS3, JavaScript, Modern Web Standards
-> Last Updated: 2025
+> Last Updated: December 2025
 
 # ABOUT
 Abhay Gupta is a dedicated computer science undergraduate with expertise in:
@@ -176,6 +176,12 @@ Currently pursuing dual degrees:
 
 # ACHIEVEMENTS
 
+## Competitive Programming
+- CodeVita Round 2 Season 13 2025 - Global Rank 1374 (abs_6187)
+  * LinkedIn Post: https://www.linkedin.com/feed/update/urn:li:share:7401223586411278336
+  * One of the top performers in TCS CodeVita global coding competition
+  * Demonstrated strong problem-solving and algorithmic skills
+
 ## Hackathon Wins
 - 1st Prize - HackSRIT'25 (ReelsPRO Project) - 15,000 INR
 - Top 100 Teams - IIITDM Jabalpur HackByte 3.0 (AgentX Travel India)
@@ -208,15 +214,22 @@ Currently pursuing dual degrees:
 
 # WEBSITE STRUCTURE
 
+## Architecture
+The portfolio uses a single-page architecture with:
+- Main `index.html` - Contains all sections (Hero, Experience, Education, Contact, Skills, Projects, Achievements)
+- `js/main.js` - Main application logic
+- `js/components.js` - UI component logic
+- Responsive CSS with component-based styling
+
 ## Main Sections
 1. Hero Section - Introduction and profile
-2. Experience/Work History - Professional timeline
+2. Experience - Professional timeline
 3. Education - Academic background
-4. Contact - Contact information and social links
+4. Contact - Contact card with social links
 5. Skills - Technical skills showcase
 6. Featured Project - HackSRIT'25 Winner showcase
 7. Projects - Portfolio of other projects
-8. Achievements & Awards - Recognition and certifications
+8. Achievements - CodeVita, hackathons, scholarships, certifications
 
 ## Navigation
 - FEATURED PROJECT - Jump to featured project section

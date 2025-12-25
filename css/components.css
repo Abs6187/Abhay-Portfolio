@@ -614,3 +614,35 @@
 .cs-button b:hover{
   background-color: var(--secondary-color);
 }
+
+/* LINKEDIN EMBED */
+.linkedin-embed-container {
+  margin: 20px 0;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.linkedin-embed-container iframe {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive LinkedIn embed */
+@media (max-width: 768px) {
+  .linkedin-embed-container iframe {
+    width: 100% !important;
+    height: auto;
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 504px) {
+  .linkedin-embed-container iframe {
+    width: 100% !important;
+    height: auto;
+    min-height: 350px;
+  }
+}

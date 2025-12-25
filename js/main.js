@@ -1,6 +1,6 @@
 // Main JavaScript file for portfolio functionality
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Initialize all components
     initializeSkills();
     initializeProjects();
@@ -48,7 +48,7 @@ function initializeSkills() {
             { name: 'Firebase', icon: './assets/skills/Backend/firebase.png' },
             { name: 'Node Js', icon: './assets/skills/Backend/node.png' },
             { name: 'Flask', icon: './assets/skills/Backend/flask.png' },
-            { name: 'Django', icon: './assets/skills/Backend/firebase.png' }
+            { name: 'Django', icon: './assets/python.png' }
         ],
         'Data Science & ML': [
             { name: 'Machine Learning', icon: './assets/Machine Learning.jpg' },
@@ -72,9 +72,9 @@ function initializeSkills() {
     Object.entries(skillsData).forEach(([category, skills]) => {
         const categoryDiv = document.createElement('div');
         categoryDiv.innerHTML = `
-            <h3 style="color:white">${category}</h3>
-            <ul style="list-style-type: none;">
-                ${skills.map(skill => `
+    <h3 style = "color:white"> ${category}</h3>
+        <ul style="list-style-type: none;">
+            ${skills.map(skill => `
                     <li>
                         <div class="m2">
                             <div class="logo">
@@ -88,8 +88,8 @@ function initializeSkills() {
                         </div>
                     </li>
                 `).join('')}
-            </ul>
-        `;
+        </ul>
+`;
         skillsContainer.appendChild(categoryDiv);
     });
 }
@@ -144,32 +144,32 @@ function initializeProjects() {
 
         const projectItem = document.createElement('li');
         projectItem.innerHTML = `
-            <div class="card">
-                <div class="content">
-                    <div class="back">
-                        <div class="back-content">
-                            <div style="width: 200px; height: 125px;" class="card">
-                                <div class="content">
-                                    <div class="back">
-                                        <div style="border-radius: 5px; width:98%; height:98%; overflow: hidden;" class="back-content">
-                                            <img src="${project.image}" alt="${project.name}" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="background-color: transparent;">
-                                <p style="background-color: transparent; font-weight: bold; margin-bottom: 10px;">
-                                    ${project.name}
-                                </p>
-                                <div style="display: flex; justify-content: center; background-color: transparent;">
-                                    <button onclick="openProjectPage('${project.name}')">Details</button>
+    <div class="card">
+        <div class="content">
+            <div class="back">
+                <div class="back-content">
+                    <div style="width: 200px; height: 125px;" class="card">
+                        <div class="content">
+                            <div class="back">
+                                <div style="border-radius: 5px; width:98%; height:98%; overflow: hidden;" class="back-content">
+                                    <img src="${project.image}" alt="${project.name}" />
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div style="background-color: transparent;">
+                        <p style="background-color: transparent; font-weight: bold; margin-bottom: 10px;">
+                            ${project.name}
+                        </p>
+                        <div style="display: flex; justify-content: center; background-color: transparent;">
+                            <button onclick="openProjectPage('${project.name}')">Details</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        `;
+        </div>
+            </div>
+    `;
         projectsList.appendChild(projectItem);
     });
 
@@ -326,24 +326,24 @@ function showProjectDetails(projectName) {
     if (project) {
         let linksHtml = '';
         Object.entries(project.links).forEach(([label, url]) => {
-            linksHtml += `<a href="${url}" target="_blank" style="color: #FF4500; text-decoration: none; margin-right: 15px; display: block; margin-bottom: 8px;">${label}</a>`;
+            linksHtml += `<a href = "${url}" target = "_blank" style = "color: #FF4500; text-decoration: none; margin-right: 15px; display: block; margin-bottom: 8px;"> ${label}</a> `;
         });
 
-        let detailsText = `${projectName}\n\n${project.description}\n\nTechnologies: ${project.technologies}`;
+        let detailsText = `${projectName} \n\n${project.description} \n\nTechnologies: ${project.technologies} `;
 
         if (project.team) {
-            detailsText += `\n\nTeam: ${project.team}`;
+            detailsText += `\n\nTeam: ${project.team} `;
         }
 
         if (project.achievements) {
-            detailsText += `\n\nAchievements: ${project.achievements}`;
+            detailsText += `\n\nAchievements: ${project.achievements} `;
         }
 
-        detailsText += `\n\nLinks:\n${linksHtml}`;
+        detailsText += `\n\nLinks: \n${linksHtml} `;
 
         alert(detailsText);
     } else {
-        alert(`${projectName}\n\nProject details coming soon!`);
+        alert(`${projectName} \n\nProject details coming soon!`);
     }
 }
 
@@ -375,7 +375,7 @@ function initializeBrokenLinkHandler() {
     const externalLinks = document.querySelectorAll('a[href^="http"]:not([href*="github.com"]):not([href*="linkedin.com"]):not([href*="linktr.ee"]):not([href*="huggingface.co"]):not([href*="vercel.app"])');
 
     externalLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', function (e) {
             // Check if link might be broken (you can customize this logic)
             const href = this.getAttribute('href');
 
@@ -392,7 +392,7 @@ function initializeBrokenLinkHandler() {
 function createBrokenLinkModal() {
     // Create modal HTML
     const modalHTML = `
-        <div id="broken-link-modal" class="broken-link-modal" style="display: none;">
+    <div id = "broken-link-modal" class="broken-link-modal" style = "display: none;">
             <div class="broken-link-overlay"></div>
             <div class="broken-link-content">
                 <div class="broken-link-animation">
@@ -419,135 +419,135 @@ function createBrokenLinkModal() {
 function addBrokenLinkStyles() {
     const style = document.createElement('style');
     style.textContent = `
-        .broken-link-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 10000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+        .broken - link - modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100 %;
+    height: 100 %;
+    z - index: 10000;
+    display: flex;
+    align - items: center;
+    justify - content: center;
+}
 
-        .broken-link-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(10px);
-        }
+        .broken - link - overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100 %;
+    height: 100 %;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop - filter: blur(10px);
+}
 
-        .broken-link-content {
-            position: relative;
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-            border: 2px solid #333;
-            border-radius: 20px;
-            padding: 40px;
-            max-width: 500px;
-            width: 90%;
-            text-align: center;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-            animation: modalSlideIn 0.3s ease-out;
-        }
+        .broken - link - content {
+    position: relative;
+    background: linear - gradient(135deg, #1a1a1a 0 %, #2d2d2d 100 %);
+    border: 2px solid #333;
+    border - radius: 20px;
+    padding: 40px;
+    max - width: 500px;
+    width: 90 %;
+    text - align: center;
+    box - shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    animation: modalSlideIn 0.3s ease - out;
+}
 
-        @keyframes modalSlideIn {
+@keyframes modalSlideIn {
             from {
-                opacity: 0;
-                transform: translateY(-50px) scale(0.9);
-            }
+        opacity: 0;
+        transform: translateY(-50px) scale(0.9);
+    }
             to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
 
-        .broken-link-animation {
-            margin-bottom: 30px;
-        }
+        .broken - link - animation {
+    margin - bottom: 30px;
+}
 
-        .construction-gif {
-            max-width: 200px;
-            height: auto;
-            border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(255, 69, 0, 0.3);
-        }
+        .construction - gif {
+    max - width: 200px;
+    height: auto;
+    border - radius: 15px;
+    box - shadow: 0 10px 20px rgba(255, 69, 0, 0.3);
+}
 
-        .broken-link-content h2 {
-            color: #FF4500;
-            font-size: 2rem;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
+        .broken - link - content h2 {
+    color: #FF4500;
+    font - size: 2rem;
+    margin - bottom: 15px;
+    font - weight: 700;
+}
 
-        .broken-link-content p {
-            color: #ccc;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
+        .broken - link - content p {
+    color: #ccc;
+    font - size: 1.1rem;
+    line - height: 1.6;
+    margin - bottom: 30px;
+}
 
-        .broken-link-actions {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
+        .broken - link - actions {
+    display: flex;
+    gap: 15px;
+    justify - content: center;
+    flex - wrap: wrap;
+}
 
-        .broken-link-btn {
-            padding: 12px 25px;
-            border: none;
-            border-radius: 25px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            font-size: 1rem;
-        }
+        .broken - link - btn {
+    padding: 12px 25px;
+    border: none;
+    border - radius: 25px;
+    font - weight: 600;
+    text - decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font - size: 1rem;
+}
 
-        .broken-link-btn.primary {
-            background: linear-gradient(45deg, #FF4500, #FF6347);
-            color: white;
-        }
+        .broken - link - btn.primary {
+    background: linear - gradient(45deg, #FF4500, #FF6347);
+    color: white;
+}
 
-        .broken-link-btn.secondary {
-            background: linear-gradient(45deg, #2196F3, #21CBF3);
-            color: white;
-        }
+        .broken - link - btn.secondary {
+    background: linear - gradient(45deg, #2196F3, #21CBF3);
+    color: white;
+}
 
-        .broken-link-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255, 69, 0, 0.4);
-        }
+        .broken - link - btn:hover {
+    transform: translateY(-2px);
+    box - shadow: 0 5px 15px rgba(255, 69, 0, 0.4);
+}
 
-        .broken-link-btn.secondary:hover {
-            box-shadow: 0 5px 15px rgba(33, 150, 243, 0.4);
-        }
+        .broken - link - btn.secondary:hover {
+    box - shadow: 0 5px 15px rgba(33, 150, 243, 0.4);
+}
 
-        @media (max-width: 768px) {
-            .broken-link-content {
-                padding: 30px 20px;
-                margin: 20px;
-            }
+@media(max - width: 768px) {
+            .broken - link - content {
+        padding: 30px 20px;
+        margin: 20px;
+    }
 
-            .broken-link-content h2 {
-                font-size: 1.5rem;
-            }
+            .broken - link - content h2 {
+        font - size: 1.5rem;
+    }
 
-            .broken-link-actions {
-                flex-direction: column;
-                align-items: center;
-            }
+            .broken - link - actions {
+        flex - direction: column;
+        align - items: center;
+    }
 
-            .broken-link-btn {
-                width: 100%;
-                max-width: 200px;
-            }
-        }
-    `;
+            .broken - link - btn {
+        width: 100 %;
+        max - width: 200px;
+    }
+}
+`;
 
     document.head.appendChild(style);
 }
@@ -571,14 +571,14 @@ function closeBrokenLinkModal() {
 }
 
 // Close modal when clicking overlay
-document.addEventListener('click', function(e) {
+document.addEventListener('click', function (e) {
     if (e.target.classList.contains('broken-link-overlay')) {
         closeBrokenLinkModal();
     }
 });
 
 // Close modal with Escape key
-document.addEventListener('keydown', function(e) {
+document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') {
         closeBrokenLinkModal();
     }
@@ -590,7 +590,7 @@ function initializeContactTracking() {
     const contactButtons = document.querySelectorAll('.cs-button, .cs-social-links-container a');
 
     contactButtons.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             if (window.portfolioCounter) {
                 window.portfolioCounter.trackContactClick();
             }
@@ -601,7 +601,7 @@ function initializeContactTracking() {
     const projectButtons = document.querySelectorAll('button[onclick*="openProjectPage"], .demo-btn, .github-btn, .video-btn, .docs-btn');
 
     projectButtons.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             if (window.portfolioCounter) {
                 window.portfolioCounter.trackProjectClick();
             }

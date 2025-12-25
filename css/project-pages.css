@@ -1661,3 +1661,77 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* PROJECT UPDATES & PROGRESS */
+.updates-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.update-content h3 {
+    color: var(--secondary-color);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.update-features, .update-tech {
+    margin: 25px 0;
+}
+
+.update-features h4, .update-tech h4 {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.update-features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.update-features ul li {
+    color: var(--tertiary-color);
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.update-features ul li::before {
+    content: '';
+    color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.update-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.updates-container .linkedin-embed-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: sticky;
+    top: 100px;
+}
+
+@media (max-width: 1024px) {
+    .updates-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .updates-container .linkedin-embed-container {
+        position: static;
+        margin-top: 20px;
+    }
+}

@@ -442,7 +442,7 @@ function setupEventTracking() {
         // Track resume downloads
         document.addEventListener('click', function(e) {
             try {
-                const target = e.target.closest('a[href*="resume"], button:contains("Resume"), .cs-button');
+                const target = e.target.closest('a[href*="resume"], button, .cs-button');
                 if (target && target.textContent.toLowerCase().includes('resume') && window.portfolioCounter) {
                     window.portfolioCounter.trackResumeDownload();
                 }

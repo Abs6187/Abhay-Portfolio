@@ -7,25 +7,38 @@ A modern, responsive portfolio website showcasing Abhay Gupta's skills, projects
 - **Responsive Design**: Works seamlessly across all devices
 - **Modern UI/UX**: Clean, professional design with smooth animations
 - **Interactive Elements**: Hover effects, smooth scrolling, and dynamic content
-- **Modular Architecture**: Well-organized code structure for easy maintenance
+- **Dynamic Content**: JavaScript-powered project and skills display
 - **Performance Optimized**: Fast loading with optimized assets
+- **SEO Friendly**: Comprehensive sitemap, robots.txt, and LLM-friendly indexing
 
 ## 📁 File Structure
 
 ```
 Portfolio/
-├── index.html              # Main HTML file
+├── index.html              # Main HTML file with all content
+├── project-*.html          # Individual project detail pages
+│   ├── project-reelspro.html       # ReelsPro (HackSRIT'25 Winner)
+│   ├── project-agentx.html         # AgentX Travel India
+│   ├── project-helmet-detection.html
+│   ├── project-edupath.html
+│   ├── project-jarvis.html
+│   └── project-ml.html
 ├── css/
 │   ├── styles.css          # Main stylesheet
 │   └── components.css      # Component-specific styles
 ├── js/
-│   ├── main.js            # Main JavaScript functionality
-│   └── components.js      # Interactive components
+│   ├── main.js             # Main JavaScript functionality
+│   ├── components.js       # Interactive components
+│   └── counter.js          # Analytics counter
 ├── assets/
-│   ├── Profile_Photo.jpg  # Profile picture
-│   ├── projects/          # Project images
-│   └── skills/            # Skill icons
-└── README.md              # This file
+│   └── Profile_Photo.jpg   # Profile picture
+├── sitemap.xml             # SEO sitemap
+├── robots.txt              # Search engine directives
+├── llms.txt                # LLM indexing file
+├── favicon.png             # Site favicon
+├── LICENSE                 # License file
+├── README.md               # This file
+└── SETUP.md                # Setup instructions
 ```
 
 ## 🛠️ Technologies Used
@@ -68,60 +81,76 @@ Portfolio/
 
 ## 🚀 Getting Started
 
-1. **Clone or Download** the portfolio files
-2. **Open** `index.html` in a web browser
-3. **Customize** content in the respective files:
-   - Update personal information in `index.html`
-   - Modify styles in `css/` files
-   - Add functionality in `js/` files
+### Local Development
+1. **Clone or Download** the portfolio repository
+2. **Open with Live Server** (recommended):
+   - Using Python: `python -m http.server 8000`
+   - Using VS Code: Install "Live Server" extension and click "Go Live"
+   - Using Node: `npx http-server -p 8000`
+3. **Open in Browser**: Navigate to `http://localhost:8000`
+
+### Direct Access
+Simply open `index.html` directly in any modern web browser (Chrome, Firefox, Safari, Edge)
 
 ## 📝 Customization Guide
 
 ### Personal Information
 Update the following in `index.html`:
-- Name and title in hero section
-- Contact information in contact card
-- Social media links
-- Education and experience details
+- Name, title, and bio in the hero section
+- Contact information (email, phone, location)
+- Social media links (GitHub, LinkedIn, Instagram, Linktree)
+- Experience and education timeline details
+- Projects and achievements
 
 ### Styling
-Modify `css/styles.css` for:
-- Color scheme
-- Typography
-- Layout adjustments
+Modify `css/styles.css` and `css/components.css` for:
+- Color scheme customization
+- Typography and font adjustments
+- Layout and spacing modifications
+- Animation and transition effects
 
 ### Functionality
-Edit `js/main.js` for:
-- Skills data
-- Project information
-- Interactive features
+Edit JavaScript files for dynamic content:
+- `js/main.js`: Skills data, project information, scroll behavior
+- `js/components.js`: Interactive UI components
+- `js/counter.js`: Analytics and visit tracking
 
 ## 🎯 Key Sections
 
 ### 1. Hero Section
 - Professional introduction
-- Profile photo
-- Call-to-action
+- Profile photo with responsive design
+- Name, title, and role display
 
-### 2. Experience
-- Work history timeline
-- Education details
-- Contact information
+### 2. Experience & Education
+- Interactive timeline with stepper UI
+- Work history (Cisco Virtual Intern, Reliance Foundation Scholar)
+- Educational background (SRIT Jabalpur, IIT Madras)
+- Contact card with location, email, and phone
 
 ### 3. Skills
-- Technical skills organized by category
-- Interactive skill cards
-- Technology icons
+- Dynamic skill cards organized by category
+- Technology stack showcase
+- Frontend, Backend, AI/ML, and Tools sections
 
-### 4. Projects
-- Featured project showcase
-- Project details modal
-- Technology stack display
+### 4. Featured Project
+- **ReelsPro** - HackSRIT'25 Winner (₹15,000 Prize)
+- AI-powered video platform with content moderation
+- Full tech stack display and project links
+- Live demo, GitHub repo, and documentation links
 
-### 5. Achievements
-- Hackathon wins
-- Scholarships and recognition
-- Professional certifications
+### 5. Other Projects
+- **AgentX Travel India** - Multi-Agent AI System (HackByte 3.0 Top 100)
+- **Helmet Detection** - YOLOv11-based safety system
+- **EduPath** - Educational platform
+- **JARVIS** - AI assistant
+- **ML Projects** - Various machine learning implementations
+
+### 6. Achievements
+- **Competitive Programming**: CodeVita Round 2 Season 13 - Global Rank 1374
+- **Hackathon Wins**: HackSRIT'25 Winner, HackByte 3.0 Top 100, DTU GDG Top 6
+- **Scholarships**: Reliance Foundation, ONGC Merit Scholar, LIC GJSS
+- **Certifications**: Cisco CyberOps Associate, Postman, Infosys certificates
 
 ## 🔧 Browser Support
 
@@ -145,4 +174,4 @@ This portfolio is created for Abhay Gupta. All rights reserved.
 
 ---
 
-**Last Updated**: January 2025
+**Last Updated**: December 25, 2025
