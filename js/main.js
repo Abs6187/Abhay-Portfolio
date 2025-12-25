@@ -125,7 +125,7 @@ function initializeProjects() {
         },
         {
             name: 'JARVIS AI Assistant',
-            image: './assets/projects/extension.png',
+            image: './assets/projects/gifloader.gif',
             description: 'Just A Rather Very Intelligent System - Voice-controlled AI assistant with multiple capabilities'
         },
         {

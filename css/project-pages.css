@@ -770,12 +770,14 @@
     font-weight: 600;
 }
 
-.limitation-list, .enhancement-list {
+.limitation-list,
+.enhancement-list {
     list-style: none;
     padding: 0;
 }
 
-.limitation-list li, .enhancement-list li {
+.limitation-list li,
+.enhancement-list li {
     color: var(--tertiary-color);
     margin-bottom: 10px;
     padding-left: 20px;
@@ -1174,7 +1176,8 @@
     font-weight: 600;
 }
 
-.profile-description, .profile-mission {
+.profile-description,
+.profile-mission {
     color: var(--tertiary-color);
     line-height: 1.6;
     margin-bottom: 20px;
@@ -1368,10 +1371,13 @@
 }
 
 @keyframes pulse-text {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0.8;
         transform: scale(1);
     }
+
     50% {
         opacity: 1;
         transform: scale(1.05);
@@ -1436,134 +1442,134 @@
         text-align: center;
         gap: 40px;
     }
-    
+
     .project-hero h1 {
         font-size: 2.5rem;
     }
-    
+
     .project-placeholder-large {
         width: 300px;
         height: 200px;
     }
-    
+
     .project-overview {
         grid-template-columns: 1fr;
         gap: 40px;
     }
-    
+
     .project-stats {
         grid-template-columns: 1fr 1fr;
         gap: 20px;
     }
-    
+
     .features-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .tech-categories {
         grid-template-columns: 1fr;
     }
-    
+
     .team-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
-    
+
     .videos-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .project-hero .project-links {
         justify-content: center;
     }
-    
+
     .project-badge {
         justify-content: center;
     }
-    
+
     .architecture-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .evolution-timeline {
         grid-template-columns: 1fr;
     }
-    
+
     .tracks-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .project-image {
         width: 300px;
         height: 200px;
     }
-    
+
     .workflow-steps {
         grid-template-columns: 1fr;
     }
-    
+
     .results-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .demos-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .applications-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .improvements-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .course-categories-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .architecture-steps {
         grid-template-columns: 1fr;
     }
-    
+
     .highlights-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .demo-showcase {
         grid-template-columns: 1fr;
         gap: 30px;
     }
-    
+
     .capabilities-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .modules-grid {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
-    
+
     .use-cases-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .jarvis-interface {
         width: 300px;
         height: 200px;
     }
-    
+
     .interface-text h4 {
         font-size: 1.4rem;
     }
-    
+
     .interface-text p {
         font-size: 0.9rem;
     }
-    
+
     .jarvis-banner .project-hero-content {
         padding: 20px;
         margin: 10px;
     }
-    
+
     .jarvis-banner h1 {
         font-size: 2.5rem;
     }
@@ -1573,90 +1579,90 @@
     .project-hero {
         padding: 100px 0 60px;
     }
-    
+
     .project-hero h1 {
         font-size: 2rem;
     }
-    
+
     .project-subtitle {
         font-size: 1.1rem;
     }
-    
+
     .project-section {
         padding: 60px 0;
     }
-    
+
     .project-section h2 {
         font-size: 2rem;
     }
-    
+
     .project-stats {
         grid-template-columns: 1fr;
     }
-    
+
     .stat-item {
         padding: 20px 15px;
     }
-    
+
     .stat-item h3 {
         font-size: 1.5rem;
     }
-    
+
     .jarvis-interface {
         width: 250px;
         height: 150px;
     }
-    
+
     .interface-text h4 {
         font-size: 1.2rem;
     }
-    
+
     .interface-text p {
         font-size: 0.8rem;
     }
-    
+
     .profile-stats {
         grid-template-columns: 1fr;
     }
-    
+
     .profile-stats .stat-item h4 {
         font-size: 1.2rem;
     }
-    
+
     .hf-logo {
         padding: 20px;
     }
-    
+
     .hf-logo h4 {
         font-size: 3rem;
     }
-    
+
     .jarvis-banner .project-hero-content {
         padding: 15px;
         margin: 5px;
     }
-    
+
     .jarvis-banner h1 {
         font-size: 2rem;
     }
-    
+
     .featured-projects-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .tech-expertise-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .profile-showcase {
         grid-template-columns: 1fr;
         gap: 30px;
     }
-    
+
     .profile-stats {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .categories-grid {
         grid-template-columns: 1fr;
     }
@@ -1677,11 +1683,13 @@
     font-weight: 600;
 }
 
-.update-features, .update-tech {
+.update-features,
+.update-tech {
     margin: 25px 0;
 }
 
-.update-features h4, .update-tech h4 {
+.update-features h4,
+.update-tech h4 {
     color: var(--secondary-color);
     font-size: 1.2rem;
     margin-bottom: 15px;
@@ -1729,9 +1737,54 @@
         grid-template-columns: 1fr;
         gap: 30px;
     }
-    
+
     .updates-container .linkedin-embed-container {
         position: static;
         margin-top: 20px;
+    }
+}
+
+/* GENERIC ANIMATED BANNER (Based on JARVIS) */
+.animated-banner {
+    position: relative;
+    overflow: hidden;
+}
+
+.animated-banner .project-hero-content {
+    position: relative;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    padding: 40px;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.animated-banner .project-hero-image {
+    position: relative;
+    z-index: 2;
+}
+
+.animated-banner h1 {
+    text-shadow: 0 0 20px rgba(255, 69, 0, 0.5);
+    background: linear-gradient(45deg, #FF4500, #00BFFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.animated-banner .project-subtitle {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+@media screen and (max-width: 768px) {
+    .animated-banner .project-hero-content {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .animated-banner h1 {
+        font-size: 2.5rem;
     }
 }
