@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You are Offline | Abhay Gupta Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FF4500;
+            --bg: #050505;
+            --text: #ffffff;
+            --text-secondary: #a0a0a0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Poppins', sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Animated Background Particles */
+        .bg-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.3;
+        }
+
+        .particle {
+            position: absolute;
+            background: var(--primary);
+            border-radius: 50%;
+            animation: float 15s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) scale(0); opacity: 0; }
+            50% { opacity: 0.8; }
+            100% { transform: translateY(-100px) scale(1); opacity: 0; }
+        }
+
+        /* Main Content */
+        .container {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            padding: 2rem;
+            max-width: 600px;
+        }
+
+        /* Glitch Effect on Wifi Icon */
+        .wifi-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+
+        .wifi-icon {
+            font-size: 6rem;
+            color: var(--text-secondary);
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+        .wifi-slash {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 120%;
+            height: 6px;
+            background: var(--primary);
+            transform: translate(-50%, -50%) rotate(-45deg);
+            box-shadow: 0 0 10px var(--primary);
+            animation: slash-grow 0.5s ease-out forwards;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.1); }
+        }
+
+        @keyframes slash-grow {
+            0% { width: 0; opacity: 0; }
+            100% { width: 120%; opacity: 1; }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-shadow: 0 0 10px rgba(255, 69, 0, 0.3);
+        }
+
+        p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+
+        /* Animated Button */
+        .retry-btn {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 50px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: inherit;
+        }
+
+        .retry-btn:hover {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 0 20px rgba(255, 69, 0, 0.6);
+            transform: translateY(-2px);
+        }
+
+        .retry-btn:active {
+            transform: translateY(1px);
+        }
+
+        /* Radar scan effect */
+        .radar-scan {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 69, 0, 0.1);
+            z-index: -1;
+        }
+
+        .radar-scan::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: conic-gradient(from 0deg, transparent 0deg, rgba(255, 69, 0, 0.1) 360deg);
+            animation: radar 2s linear infinite;
+        }
+
+        @keyframes radar {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="bg-particles" id="particles"></div>
+
+    <div class="radar-scan"></div>
+
+    <div class="container">
+        <div class="wifi-container">
+            <div class="wifi-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21L12 21c-0.552 0-1-0.448-1-1v0c0-0.552 0.448-1 1-1h0c0.552 0 1 0.448 1 1v0C13 20.552 12.552 21 12 21zM12 3C7.95 3 4.21 4.34 1.2 6.6L3 9C5.5 7.12 8.62 6 12 6C15.38 6 18.5 7.12 21 9L22.8 6.6C19.79 4.34 16.05 3 12 3zM12 9C9.3 9 6.81 9.89 4.8 11.4L6.6 13.8C8.1 12.67 9.97 12 12 12C14.03 12 15.9 12.67 17.4 13.8L19.2 11.4C17.19 9.89 14.7 9 12 9zM12 15C10.65 15 9.4 15.45 8.4 16.2L12 21L15.6 16.2C14.6 15.45 13.35 15 12 15z"/>
+                </svg>
+            </div>
+            <div class="wifi-slash"></div>
+        </div>
+
+        <h1>System Offline</h1>
+        <p>Connection signal lost. Re-establishing link to the portfolio mainframe...</p>
+
+        <button class="retry-btn" onclick="checkConnection()">Initialize Reconnect</button>
+    </div>
+
+    <script>
+        // Create background particles
+        const particlesContainer = document.getElementById('particles');
+        const particleCount = 20;
+
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            
+            // Random size, position, and duration
+            const size = Math.random() * 5 + 2 + 'px';
+            particle.style.width = size;
+            particle.style.height = size;
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDuration = Math.random() * 10 + 5 + 's';
+            particle.style.animationDelay = Math.random() * 5 + 's';
+            
+            particlesContainer.appendChild(particle);
+        }
+
+        // Retry connection logic
+        function checkConnection() {
+            const btn = document.querySelector('.retry-btn');
+            const originalText = btn.innerText;
+            
+            btn.innerText = 'SCANNING...';
+            btn.style.opacity = '0.7';
+            
+            // Simulate check delay
+            setTimeout(() => {
+                if (navigator.onLine) {
+                    window.location.reload();
+                } else {
+                    btn.innerText = 'FAILED. RETRY?';
+                    btn.style.opacity = '1';
+                    btn.style.borderColor = '#ff0000';
+                    btn.style.color = '#ff0000';
+                    
+                    setTimeout(() => {
+                        btn.innerText = originalText;
+                        btn.style.borderColor = '#FF4500';
+                        btn.style.color = '#FF4500';
+                    }, 2000);
+                }
+            }, 1000);
+        }
+
+        // Auto-reload when back online
+        window.addEventListener('online', () => {
+            window.location.reload();
+        });
+    </script>
+</body>
+</html>
