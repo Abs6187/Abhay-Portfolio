@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
     initializeAnimations();
     initializeSmoothScrolling();
     initializeBrokenLinkHandler();
-    initializeContactTracking();
 });
 
 // Initialize skills section
@@ -583,28 +582,3 @@ document.addEventListener('keydown', function (e) {
         closeBrokenLinkModal();
     }
 });
-
-// Initialize contact tracking
-function initializeContactTracking() {
-    // Track contact button clicks
-    const contactButtons = document.querySelectorAll('.cs-button, .cs-social-links-container a');
-
-    contactButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            if (window.portfolioCounter) {
-                window.portfolioCounter.trackContactClick();
-            }
-        });
-    });
-
-    // Track project detail clicks
-    const projectButtons = document.querySelectorAll('button[onclick*="openProjectPage"], .demo-btn, .github-btn, .video-btn, .docs-btn');
-
-    projectButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            if (window.portfolioCounter) {
-                window.portfolioCounter.trackProjectClick();
-            }
-        });
-    });
-}
