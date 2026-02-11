@@ -40,6 +40,7 @@
 
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/components.css" />
+    <link rel="manifest" href="manifest.json" />
     <title>Abhay Gupta - Portfolio | Computer Science Student & Developer</title>
 </head>
 
@@ -484,6 +485,18 @@
     <script src="./js/main.js"></script>
     <script src="./js/components.js"></script>
     <script src="./js/counter.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./service-worker.js')
+                    .then((registration) => {
+                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                    }, (err) => {
+                        console.log('ServiceWorker registration failed: ', err);
+                    });
+            });
+        }
+    </script>
 </body>
 
 </html>
