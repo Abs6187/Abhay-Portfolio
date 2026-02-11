@@ -117,7 +117,15 @@ class PortfolioCounter {
     }
 
     useFallback() {
-        this.counters = { ...this.fallbackValues };
+        console.warn('Using fallback random values for counters.');
+        this.counters = {
+            [COUNTER_NAMES.MAIN_COUNTER]: Math.floor(Math.random() * (1200 - 800 + 1)) + 800,
+            [COUNTER_NAMES.TOTAL_VISITS]: Math.floor(Math.random() * (2000 - 1500 + 1)) + 1500,
+            [COUNTER_NAMES.PAGE_VIEWS]: Math.floor(Math.random() * (4000 - 3000 + 1)) + 3000,
+            [COUNTER_NAMES.PROJECT_CLICKS]: Math.floor(Math.random() * (600 - 400 + 1)) + 400,
+            [COUNTER_NAMES.CONTACT_CLICKS]: Math.floor(Math.random() * (300 - 150 + 1)) + 150,
+            [COUNTER_NAMES.RESUME_DOWNLOADS]: Math.floor(Math.random() * (150 - 80 + 1)) + 80
+        };
     }
 
     getCounterValue(counterName) {
