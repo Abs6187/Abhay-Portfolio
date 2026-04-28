@@ -22,5 +22,10 @@
       "sizes": "512x512",
       "type": "image/jpeg"
     }
-  ]
+  ],
+  "categories": ["education", "portfolio", "technology"],
+  "orientation": "portrait",
+  "scope": "./",
+  "related_applications": [],
+  "prefer_related_applications": false
 }

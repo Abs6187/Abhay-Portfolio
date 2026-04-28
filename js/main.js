@@ -35,7 +35,9 @@ function initializeSkills() {
         'DevOps & Tools': [
             { name: 'Docker', icon: './assets/skills/Devops/docker.png' },
             { name: 'Postman', icon: './assets/skills/Devops/postman.png' },
-            { name: 'GitHub', icon: './assets/skills/Devops/github.png' }
+            { name: 'GitHub', icon: './assets/skills/Devops/github.png' },
+            { name: 'Linux', icon: './assets/skills/Devops/github.png' },
+            { name: 'Appian', icon: './assets/skills/Backend/firebase.png' }
         ],
         'Backend Languages': [
             { name: 'PHP', icon: './assets/skills/Backend/php.png' },
@@ -46,6 +48,7 @@ function initializeSkills() {
         'Backend Technologies': [
             { name: 'Firebase', icon: './assets/skills/Backend/firebase.png' },
             { name: 'Node Js', icon: './assets/skills/Backend/node.png' },
+            { name: 'Express Js', icon: './assets/skills/Backend/node.png' },
             { name: 'Flask', icon: './assets/skills/Backend/flask.png' },
             { name: 'Django', icon: './assets/python.png' }
         ],
@@ -53,6 +56,9 @@ function initializeSkills() {
             { name: 'Machine Learning', icon: './assets/Machine Learning.jpg' },
             { name: 'Computer Vision', icon: './assets/Computer Vision.png' },
             { name: 'NLP', icon: './assets/NLP.png' },
+            { name: 'Generative AI', icon: './assets/NLP.png' },
+            { name: 'RAG Systems', icon: './assets/python.png' },
+            { name: 'Multi-Agent Systems', icon: './assets/skills/Devops/postman.png' },
             { name: 'Data Analysis', icon: './assets/python.png' }
         ],
         'Databases': [
@@ -65,6 +71,11 @@ function initializeSkills() {
             { name: 'Skype', icon: './assets/skills/collaboration/skype.png' },
             { name: 'Notion', icon: './assets/skills/collaboration/notion.png' },
             { name: 'Figma', icon: './assets/skills/collaboration/figma.png' }
+        ],
+        'Professional Skills': [
+            { name: 'Stakeholder Communication', icon: './assets/skills/collaboration/slack.png' },
+            { name: 'Agile Delivery', icon: './assets/skills/collaboration/jira.png' },
+            { name: 'Problem Solving', icon: './assets/python.png' }
         ]
     };
 
@@ -418,40 +429,40 @@ function createBrokenLinkModal() {
 function addBrokenLinkStyles() {
     const style = document.createElement('style');
     style.textContent = `
-        .broken - link - modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100 %;
-    height: 100 %;
-    z - index: 10000;
-    display: flex;
-    align - items: center;
-    justify - content: center;
-}
+        .broken-link-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-        .broken - link - overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100 %;
-    height: 100 %;
-    background: rgba(0, 0, 0, 0.8);
-    backdrop - filter: blur(10px);
-}
+        .broken-link-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+        }
 
-        .broken - link - content {
-    position: relative;
-    background: linear - gradient(135deg, #1a1a1a 0 %, #2d2d2d 100 %);
-    border: 2px solid #333;
-    border - radius: 20px;
-    padding: 40px;
-    max - width: 500px;
-    width: 90 %;
-    text - align: center;
-    box - shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-    animation: modalSlideIn 0.3s ease - out;
-}
+        .broken-link-content {
+            position: relative;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            border: 2px solid #333;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            animation: modalSlideIn 0.3s ease-out;
+        }
 
 @keyframes modalSlideIn {
             from {
@@ -464,88 +475,88 @@ function addBrokenLinkStyles() {
     }
 }
 
-        .broken - link - animation {
-    margin - bottom: 30px;
-}
+        .broken-link-animation {
+            margin-bottom: 30px;
+        }
 
-        .construction - gif {
-    max - width: 200px;
-    height: auto;
-    border - radius: 15px;
-    box - shadow: 0 10px 20px rgba(255, 69, 0, 0.3);
-}
+        .construction-gif {
+            max-width: 200px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(255, 69, 0, 0.3);
+        }
 
-        .broken - link - content h2 {
-    color: #FF4500;
-    font - size: 2rem;
-    margin - bottom: 15px;
-    font - weight: 700;
-}
+        .broken-link-content h2 {
+            color: #FF4500;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
 
-        .broken - link - content p {
-    color: #ccc;
-    font - size: 1.1rem;
-    line - height: 1.6;
-    margin - bottom: 30px;
-}
+        .broken-link-content p {
+            color: #ccc;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
 
-        .broken - link - actions {
-    display: flex;
-    gap: 15px;
-    justify - content: center;
-    flex - wrap: wrap;
-}
+        .broken-link-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
 
-        .broken - link - btn {
-    padding: 12px 25px;
-    border: none;
-    border - radius: 25px;
-    font - weight: 600;
-    text - decoration: none;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    font - size: 1rem;
-}
+        .broken-link-btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-size: 1rem;
+        }
 
-        .broken - link - btn.primary {
-    background: linear - gradient(45deg, #FF4500, #FF6347);
-    color: white;
-}
+        .broken-link-btn.primary {
+            background: linear-gradient(45deg, #FF4500, #FF6347);
+            color: white;
+        }
 
-        .broken - link - btn.secondary {
-    background: linear - gradient(45deg, #2196F3, #21CBF3);
-    color: white;
-}
+        .broken-link-btn.secondary {
+            background: linear-gradient(45deg, #2196F3, #21CBF3);
+            color: white;
+        }
 
-        .broken - link - btn:hover {
-    transform: translateY(-2px);
-    box - shadow: 0 5px 15px rgba(255, 69, 0, 0.4);
-}
+        .broken-link-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 69, 0, 0.4);
+        }
 
-        .broken - link - btn.secondary:hover {
-    box - shadow: 0 5px 15px rgba(33, 150, 243, 0.4);
-}
+        .broken-link-btn.secondary:hover {
+            box-shadow: 0 5px 15px rgba(33, 150, 243, 0.4);
+        }
 
-@media(max - width: 768px) {
-            .broken - link - content {
-        padding: 30px 20px;
-        margin: 20px;
-    }
+        @media (max-width: 768px) {
+            .broken-link-content {
+                padding: 30px 20px;
+                margin: 20px;
+            }
 
-            .broken - link - content h2 {
-        font - size: 1.5rem;
-    }
+            .broken-link-content h2 {
+                font-size: 1.5rem;
+            }
 
-            .broken - link - actions {
-        flex - direction: column;
-        align - items: center;
-    }
+            .broken-link-actions {
+                flex-direction: column;
+                align-items: center;
+            }
 
-            .broken - link - btn {
-        width: 100 %;
-        max - width: 200px;
-    }
-}
+            .broken-link-btn {
+                width: 100%;
+                max-width: 200px;
+            }
+        }
 `;
 
     document.head.appendChild(style);

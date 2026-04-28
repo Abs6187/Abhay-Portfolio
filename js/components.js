@@ -29,7 +29,8 @@ function initializeContactCard() {
     if (!contactCard) return;
 
     // Add click to copy functionality for contact info
-    const phoneElement = contactCard.querySelector('.p-box p');
+    const contactFields = contactCard.querySelectorAll('.p-box p');
+    const phoneElement = contactFields[0];
     if (phoneElement && phoneElement.textContent.includes('+91')) {
         phoneElement.style.cursor = 'pointer';
         phoneElement.addEventListener('click', function() {
@@ -39,7 +40,7 @@ function initializeContactCard() {
         });
     }
 
-    const emailElement = contactCard.querySelector('.p-box p');
+    const emailElement = contactFields[1];
     if (emailElement && emailElement.textContent.includes('@')) {
         emailElement.style.cursor = 'pointer';
         emailElement.addEventListener('click', function() {

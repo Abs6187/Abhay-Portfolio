@@ -42,6 +42,13 @@
     <link rel="stylesheet" href="./css/components.css" />
     <link rel="manifest" href="manifest.json" />
     <title>Abhay Gupta - Portfolio | Computer Science Student & Developer</title>
+    <style>
+        /* Auth Styles */
+        .auth-container { display: flex; align-items: center; gap: 10px; margin-left: 10px; }
+        .auth-btn { background: #FF4500; color: white; border: none; padding: 8px 16px; border-radius: 20px; cursor: pointer; font-family: 'Poppins', sans-serif; font-size: 0.9rem; }
+        .auth-btn:hover { background: #e03e00; }
+        .user-avatar { width: 32px; height: 32px; border-radius: 50%; object-fit: cover; border: 2px solid #FF4500; }
+    </style>
 </head>
 
 <body>
@@ -73,6 +80,30 @@
             <div class="project-wrapper">
                 <h2>Experience / Work History</h2>
                 <div class="stepper-box">
+                        <div class="stepper-step stepper-completed">
+                        <div class="stepper-circle">
+                            <svg viewBox="0 0 16 16" class="bi bi-check-lg" fill="currentColor" height="16" width="16"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="stepper-line"></div>
+                        <div class="stepper-content">
+                            <div class="stepper-title">Xebia</div>
+                            <div class="stepper-status">Completed</div>
+                            <div class="stepper-status stepper-job">Apprentice (Trainee Engineer)</div>
+                            <div class="stepper-time">2026 • 2 Months</div>
+                        </div>
+                        <div style="width: 50%;" class="ol-wrapper">
+                            <ol type="1" style="margin:0">
+                                <li class="desc-work">Worked in the Delivery Department on Appian low-code automation and AngularJS-based UI components.</li>
+                                <li class="desc-work">Applied machine learning fundamentals including data preprocessing and model implementation in real project scenarios.</li>
+                            </ol>
+                        </div>
+                    </div>
+
                     <div class="stepper-step stepper-completed">
                         <div class="stepper-circle">
                             <svg viewBox="0 0 16 16" class="bi bi-check-lg" fill="currentColor" height="16" width="16"
@@ -180,13 +211,14 @@
                             </div>
                             <div class="stepper-line"></div>
                             <div class="stepper-content">
-                                <div class="stepper-title">Shri Ram Institute of Technology, Jabalpur, India</div>
-                                <div class="stepper-status">Bachelor of Technology (BTech), Computer Science</div>
-                                <div class="stepper-status">In Progress</div>
-                                <div class="stepper-status stepper-job">Full Time</div>
-                                <div class="stepper-time">2022 - Present</div>
-                            </div>
+                            <div class="stepper-title">Shri Ram Institute of Technology, Jabalpur, India</div>
+                            <div class="stepper-status">Bachelor of Technology (BTech), Computer Science</div>
+                            <div class="stepper-status">In Progress</div>
+                            <div class="stepper-status stepper-job">Full Time</div>
+                            <div class="stepper-time">August 2022 - June 2026</div>
+                            <div class="stepper-status">80%+ CGPA • No Active Backlogs</div>
                         </div>
+                    </div>
 
                         <div class="stepper-step stepper-completed">
                             <div class="stepper-circle">
@@ -199,14 +231,15 @@
                             </div>
                             <div class="stepper-line"></div>
                             <div class="stepper-content">
-                                <div class="stepper-title">Indian Institute of Technology Madras, Chennai, India</div>
-                                <div class="stepper-status">Bachelor of Science (BS), Data Science and Applications
-                                </div>
-                                <div class="stepper-status">In Progress</div>
-                                <div class="stepper-status stepper-job">Online Program</div>
-                                <div class="stepper-time">2022 - Present</div>
+                            <div class="stepper-title">Indian Institute of Technology Madras, Chennai, India</div>
+                            <div class="stepper-status">Bachelor of Science (BS), Data Science and Applications
                             </div>
+                            <div class="stepper-status">In Progress</div>
+                            <div class="stepper-status stepper-job">Online Program</div>
+                            <div class="stepper-time">2022 - Present</div>
+                            <div class="stepper-status">ML 95% • Deep Learning 92% • Stats 98% • DSA 94%</div>
                         </div>
+                    </div>
 
                         <div class="stepper-step stepper-completed">
                             <div class="stepper-circle">
@@ -279,7 +312,7 @@
                             </div>
                             <div class="cs-bottom-bottom">
                                 <div class="cs-social-links-container">
-                                    <a target="_blank" href="https://github.com/Abs6187" aria-label="GitHub">
+                                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Abs6187" aria-label="GitHub">
                                         <svg viewBox="0 0 496 512" xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
@@ -287,7 +320,7 @@
                                         </svg>
                                     </a>
 
-                                    <a target="_blank" href="https://linkedin.com/in/abhay-gupta-197b17264/"
+                                    <a target="_blank" rel="noopener noreferrer" href="https://linkedin.com/in/abhay-gupta-197b17264/"
                                         aria-label="LinkedIn">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                                             <path
@@ -296,7 +329,7 @@
                                         </svg>
                                     </a>
 
-                                    <a target="_blank" href="https://linktr.ee/Abhay_Gupta_6187" aria-label="Linktree">
+                                    <a target="_blank" rel="noopener noreferrer" href="https://linktr.ee/Abhay_Gupta_6187" aria-label="Linktree">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                             fill="rgba(0,0,0,1)">
                                             <path
@@ -304,7 +337,7 @@
                                             </path>
                                         </svg>
                                     </a>
-                                    <a target="_blank" href="https://www.instagram.com/absthegreat6187/"
+                                    <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/absthegreat6187/"
                                         aria-label="Instagram">
                                         <svg viewBox="0 0 16 15.999" height="15.999" width="16"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -314,7 +347,7 @@
                                         </svg>
                                     </a>
                                 </div>
-                                <a href="https://linktr.ee/Abhay_Gupta_6187" target="_blank"
+                                <a href="./assets/Abhay_Gupta_Resume_2026.pdf" target="_blank" rel="noopener noreferrer"
                                     class="cs-button"><b>Resume</b></a>
                             </div>
                         </div>
@@ -438,6 +471,9 @@
                             <li>🏆 Reliance Foundation Undergraduate Scholar (2023-Present)</li>
                             <li>🏆 ONGC Merit Scholar and LIC GJSS Scholar</li>
                             <li>🏆 Top 5 Performer in Coding Ninjas & GfG Deutsche Bank Contest</li>
+                            <li>🏆 BrahmaX 1.0 National Hackathon Finalist (Round 3) - Team TechMatrix Solvers</li>
+                            <li>🏆 WADLA 4.0 Theme-Based Winner - Inject Solar PS with 99% ONNX model accuracy</li>
+                            <li>🏆 Selected as SDE at APMOSYS and cleared 4 technical and managerial rounds at Xebia</li>
                         </ul>
                     </div>
 
@@ -451,6 +487,17 @@
                             <li>🏆 Data Structures and Algorithms using Java (Infosys SpringBoard)</li>
                             <li>🏆 Python Programming Certificates (Infosys SpringBoard)</li>
                             <li>🏆 Object-Oriented Programming using Python (Infosys SpringBoard)</li>
+                            <li>🏆 BSNL & Nokia Advanced AI/ML Training (TSSC, Jabalpur)</li>
+                            <li>🏆 Introducing Generative AI with Amazon Web Services (AWS)</li>
+                        </ul>
+                    </div>
+
+                    <div class="ul-div">
+                        <h3 class="achievement-h3">Additional Highlights</h3>
+                        <ul>
+                            <li>🏆 Solved 300+ DSA and competitive programming problems across LeetCode and related platforms</li>
+                            <li>🏆 Mentor and presenter for AI, web development, and career-planning sessions for juniors</li>
+                            <li>🏆 Languages: English (Fluent) and Hindi (Native)</li>
                         </ul>
                     </div>
                 </div>
