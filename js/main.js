@@ -1,4 +1,4 @@
-// Main JavaScript file for portfolio functionality
+﻿// Main JavaScript file for portfolio functionality
 
 document.addEventListener('DOMContentLoaded', function () {
     // Initialize all components
@@ -76,11 +76,6 @@ function initializeSkills() {
             { name: 'MS Teams', icon: './assets/skills/collaboration/ms-teams.png' },
             { name: 'Zoho Workplace', icon: './assets/skills/collaboration/zoho-workplace.png' },
             { name: 'Figma', icon: './assets/skills/collaboration/figma.png' }
-        ],
-        'Professional Skills': [
-            { name: 'Stakeholder Communication', icon: './assets/skills/collaboration/ms-teams.png' },
-            { name: 'Agile Delivery', icon: './assets/skills/collaboration/jira.png' },
-            { name: 'Problem Solving', icon: './assets/python.png' }
         ]
     };
 
@@ -92,7 +87,7 @@ function initializeSkills() {
             ${skills.map(skill => `
                     <li>
                         <div class="m2">
-                            <div class="logo">
+                            <div class="logo" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
                                 <div class="logo-wrapper">
                                     <img src="${skill.icon}" alt="${skill.name}-icon" />
                                 </div>

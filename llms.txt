@@ -143,7 +143,6 @@ Currently pursuing dual degrees:
 - Languages: HTML5, CSS3, JavaScript, TypeScript
 - Frameworks: React.js, Next.js, Angular
 - Libraries: jQuery, Tailwind CSS, Shadcn UI, MagicUI
-- Mobile: Flutter, React Native, Ionic
 
 ## Backend Development
 - Languages: Python, PHP, C++, C, Java, Node.js
