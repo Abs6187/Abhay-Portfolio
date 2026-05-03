@@ -146,9 +146,9 @@ Currently pursuing dual degrees:
 - Mobile: Flutter, React Native, Ionic
 
 ## Backend Development
-- Languages: Python, PHP, C++, Java, Node.js
+- Languages: Python, PHP, C++, C, Java, Node.js
 - Frameworks: Flask, Django, Express.js
-- Databases: MongoDB, MySQL
+- Databases: MongoDB, MongoDB Atlas, MySQL
 - Services: Firebase, ImageKit
 
 ## AI & Machine Learning
@@ -158,6 +158,7 @@ Currently pursuing dual degrees:
 - Machine Learning frameworks
 - Data Analysis
 - Generative AI (Gemini, GPT models)
+- Tools & Libraries: Gradio, Streamlit, Hugging Face
 
 ## DevOps & Tools
 - Docker
@@ -168,9 +169,8 @@ Currently pursuing dual degrees:
 
 ## Collaboration & Design
 - Jira
-- Slack
-- Skype
-- Notion
+- MS Teams
+- Zoho Workplace
 - Figma
 - Canva
 

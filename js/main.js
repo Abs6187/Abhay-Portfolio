@@ -37,9 +37,12 @@ function initializeSkills() {
             { name: 'Postman', icon: './assets/skills/Devops/postman.png' },
             { name: 'GitHub', icon: './assets/skills/Devops/github.png' },
             { name: 'Linux', icon: './assets/skills/Devops/github.png' },
-            { name: 'Appian', icon: './assets/skills/Backend/firebase.png' }
+            { name: 'Appian', icon: './assets/skills/Backend/firebase.png' },
+            { name: 'Hugging Face', icon: './assets/skills/Devops/huggingface.png' },
+            { name: 'ImageKit', icon: './assets/skills/Devops/imagekit.png' }
         ],
         'Backend Languages': [
+            { name: 'C', icon: './assets/skills/Backend/c.png' },
             { name: 'PHP', icon: './assets/skills/Backend/php.png' },
             { name: 'C++', icon: './assets/skills/Backend/c-.png' },
             { name: 'Python', icon: './assets/python.png' },
@@ -59,21 +62,23 @@ function initializeSkills() {
             { name: 'Generative AI', icon: './assets/NLP.png' },
             { name: 'RAG Systems', icon: './assets/python.png' },
             { name: 'Multi-Agent Systems', icon: './assets/skills/Devops/postman.png' },
-            { name: 'Data Analysis', icon: './assets/python.png' }
+            { name: 'Data Analysis', icon: './assets/python.png' },
+            { name: 'Gradio', icon: './assets/skills/Frontend/gradio.png' },
+            { name: 'Streamlit', icon: './assets/skills/Frontend/streamlit.png' }
         ],
         'Databases': [
             { name: 'MongoDB', icon: './assets/skills/Database/mongo.png' },
+            { name: 'MongoDB Atlas', icon: './assets/skills/Database/mongodb-atlas.png' },
             { name: 'MySQL', icon: './assets/skills/Database/mysql.png' }
         ],
         'Collaboration & Design': [
             { name: 'Jira', icon: './assets/skills/collaboration/jira.png' },
-            { name: 'Slack', icon: './assets/skills/collaboration/slack.png' },
-            { name: 'Skype', icon: './assets/skills/collaboration/skype.png' },
-            { name: 'Notion', icon: './assets/skills/collaboration/notion.png' },
+            { name: 'MS Teams', icon: './assets/skills/collaboration/ms-teams.png' },
+            { name: 'Zoho Workplace', icon: './assets/skills/collaboration/zoho-workplace.png' },
             { name: 'Figma', icon: './assets/skills/collaboration/figma.png' }
         ],
         'Professional Skills': [
-            { name: 'Stakeholder Communication', icon: './assets/skills/collaboration/slack.png' },
+            { name: 'Stakeholder Communication', icon: './assets/skills/collaboration/ms-teams.png' },
             { name: 'Agile Delivery', icon: './assets/skills/collaboration/jira.png' },
             { name: 'Problem Solving', icon: './assets/python.png' }
         ]
