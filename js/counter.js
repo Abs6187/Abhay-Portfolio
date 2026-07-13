@@ -144,9 +144,27 @@ class PortfolioCounter {
         for (const [id, name] of Object.entries(mapping)) {
             const el = document.getElementById(id);
             if (el) {
-                el.innerText = this.getCounterValue(name);
+                const targetValue = this.getCounterValue(name);
+                this.animateValue(el, 0, targetValue, 2000);
             }
         }
+    }
+
+    animateValue(obj, start, end, duration) {
+        let startTimestamp = null;
+        const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            // ease-out effect
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+            obj.innerText = Math.floor(easeOutQuart * (end - start) + start);
+            if (progress < 1) {
+                window.requestAnimationFrame(step);
+            } else {
+                obj.innerText = end;
+            }
+        };
+        window.requestAnimationFrame(step);
     }
 
     // Public tracking methods

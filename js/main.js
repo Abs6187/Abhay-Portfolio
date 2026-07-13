@@ -1,4 +1,4 @@
-﻿// Main JavaScript file for portfolio functionality
+// Main JavaScript file for portfolio functionality
 
 document.addEventListener('DOMContentLoaded', function () {
     // Initialize all components
@@ -19,8 +19,7 @@ function initializeSkills() {
             { name: 'HTML', icon: './assets/skills/Frontend/html.png' },
             { name: 'CSS', icon: './assets/skills/Frontend/css.png' },
             { name: 'JavaScript', icon: './assets/skills/Frontend/js.png' },
-            { name: 'TypeScript', icon: './assets/skills/Frontend/typescript.png' },
-            { name: 'jQuery', icon: './assets/skills/Frontend/jquery.png' }
+            { name: 'TypeScript', icon: './assets/skills/Frontend/typescript.png' }
         ],
         'Frontend Frameworks/Libraries': [
             { name: 'Angular', icon: './assets/skills/Frontend/angular.png' },
@@ -53,6 +52,7 @@ function initializeSkills() {
             { name: 'Node Js', icon: './assets/skills/Backend/node.png' },
             { name: 'Express Js', icon: './assets/skills/Backend/node.png' },
             { name: 'Flask', icon: './assets/skills/Backend/flask.png' },
+            { name: 'Fast API', icon: './assets/skills/Backend/flask.png' },
             { name: 'Django', icon: './assets/python.png' }
         ],
         'Data Science & ML': [
