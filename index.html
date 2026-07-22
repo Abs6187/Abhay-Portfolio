@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- SEO Meta Tags -->
+    <!-- Primary SEO Meta Tags -->
+    <title>Abhay Gupta - Computer Science Student & Full Stack AI Developer</title>
     <meta name="description"
         content="Abhay Gupta - Computer Science Student & Developer. Full-stack developer specializing in AI/ML, computer vision, and web development. HackSRIT'25 Winner. IIT Madras & SRIT Student." />
     <meta name="keywords"
@@ -16,13 +17,16 @@
     <link rel="canonical" href="https://www.abhaygupta6187.me/" />
 
     <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.abhaygupta6187.me/" />
     <meta property="og:title" content="Abhay Gupta - Portfolio | Computer Science Student & Developer" />
     <meta property="og:description"
         content="Full-stack developer specializing in AI/ML, computer vision, and web development. HackSRIT'25 Winner with expertise in Next.js, React, Python, and YOLOv11." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.abhaygupta6187.me/" />
     <meta property="og:image" content="https://www.abhaygupta6187.me/assets/Profile_Photo.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="Abhay Gupta Portfolio" />
+    <meta property="og:locale" content="en_US" />
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -32,16 +36,77 @@
     <meta name="twitter:image" content="https://www.abhaygupta6187.me/assets/Profile_Photo.jpg" />
 
     <!-- Additional Meta Tags -->
+    <meta name="google-site-verification" content="googleeb28aebcad32ab3b" />
     <meta name="theme-color" content="#FF4500" />
     <meta name="mobile-web-app-capable" content="yes" />
     <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="apple-touch-icon" href="favicon.png" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://www.abhaygupta6187.me/#person",
+          "name": "Abhay Gupta",
+          "url": "https://www.abhaygupta6187.me/",
+          "image": "https://www.abhaygupta6187.me/assets/Profile_Photo.jpg",
+          "jobTitle": "Computer Science Student & Full Stack AI Developer",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "APMOSYS"
+          },
+          "almaMater": [
+            {
+              "@type": "CollegeOrUniversity",
+              "name": "IIT Madras"
+            },
+            {
+              "@type": "CollegeOrUniversity",
+              "name": "SRIT Jabalpur"
+            }
+          ],
+          "sameAs": [
+            "https://github.com/Abs6187",
+            "https://www.linkedin.com/in/abhay-gupta-0a125a257/",
+            "https://huggingface.co/Abs6187"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.abhaygupta6187.me/#website",
+          "url": "https://www.abhaygupta6187.me/",
+          "name": "Abhay Gupta Portfolio",
+          "description": "Full-stack developer specializing in AI/ML, computer vision, and web development.",
+          "publisher": {
+            "@id": "https://www.abhaygupta6187.me/#person"
+          },
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "ProfilePage",
+          "@id": "https://www.abhaygupta6187.me/#webpage",
+          "url": "https://www.abhaygupta6187.me/",
+          "name": "Abhay Gupta - Computer Science Student & Full Stack AI Developer",
+          "isPartOf": {
+            "@id": "https://www.abhaygupta6187.me/#website"
+          },
+          "about": {
+            "@id": "https://www.abhaygupta6187.me/#person"
+          },
+          "description": "Portfolio of Abhay Gupta, Full-stack & AI Developer specializing in Computer Vision, MERN, Next.js, and Python."
+        }
+      ]
+    }
+    </script>
+
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/components.css" />
     <link rel="manifest" href="manifest.json" />
-    <title>Abhay Gupta - Portfolio | Computer Science Student & Developer</title>
+    <title>Abhay Gupta - Computer Science Student & Full Stack AI Developer</title>
     <style>
         /* Auth Styles */
         .auth-container {
@@ -94,7 +159,7 @@
         <!-- HERO SECTION -->
         <div class="hero" style="background-color: transparent;">
             <div>
-                <img class="profile-img" src="./assets/Profile_Photo.jpg" alt="Abhay Gupta Profile Photo" />
+                <img class="profile-img" src="./assets/Profile_Photo.jpg" alt="Abhay Gupta Profile Photo" width="180" height="180" loading="eager" />
             </div>
             <h1>Abhay Gupta</h1>
             <h2>Computer Science Student & Developer</h2>
