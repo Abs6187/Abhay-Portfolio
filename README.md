@@ -174,4 +174,40 @@ This portfolio is created for Abhay Gupta. All rights reserved.
 
 ---
 
-**Last Updated**: December 25, 2025
+## 🔍 Technical SEO & Search Console Integration
+
+This repository implements expert-level technical Search Engine Optimization (SEO) and automated Google Search Console CLI (`gsc`) integration:
+
+- **Canonical Domain**: [https://www.abhaygupta6187.me/](https://www.abhaygupta6187.me/)
+- **Structured Data (Schema.org)**:
+  - `Person`, `ProfilePage`, and `WebSite` JSON-LD schemas on `index.html`.
+  - `SoftwareApplication`, `CollectionPage`, and `BreadcrumbList` schemas on all project pages.
+- **Social Metadata**: Complete Open Graph (`og:*`) and Twitter Card (`twitter:*`) cards.
+- **Core Web Vitals**: Explicit image `width`, `height`, and `loading="eager"` attributes preventing Cumulative Layout Shift (CLS).
+- **Google Search Console Ownership**: Officially verified via HTML file (`googleeb28aebcad32ab3b.html`) and meta verification tag.
+- **Sitemap & Crawling**: XML sitemap (`sitemap.xml`) with 10 indexable pages and `robots.txt` directives for major search engines and AI bots (`GPTBot`, `Claude-Web`).
+
+### 🛠️ Google Search Console CLI (`gsc`)
+
+Manage Search Console indexing and analytics directly from your terminal:
+
+```powershell
+# Check site health & diagnostic status
+gsc doctor
+
+# List submitted sitemaps and indexing status
+gsc sitemap list
+
+# Submit sitemap to Google Search Console
+gsc sitemap submit --feedpath https://www.abhaygupta6187.me/sitemap.xml
+
+# Inspect live URL indexing status
+gsc url inspect --url https://www.abhaygupta6187.me/
+
+# Query search queries & performance analytics
+gsc analytics query --start-date 2026-07-01 --end-date 2026-07-22 --dimension query
+```
+
+---
+
+**Last Updated**: July 22, 2026
