@@ -22,111 +22,57 @@ const COUNTER_NAMES = {
 class PortfolioCounter {
     constructor() {
         this.counters = {};
-        this.apiAvailable = false;
-        // Default values if API fails
         this.fallbackValues = {
-            [COUNTER_NAMES.MAIN_COUNTER]: 1000,
-            [COUNTER_NAMES.TOTAL_VISITS]: 1500,
-            [COUNTER_NAMES.PAGE_VIEWS]: 3000,
-            [COUNTER_NAMES.PROJECT_CLICKS]: 500,
-            [COUNTER_NAMES.CONTACT_CLICKS]: 200,
-            [COUNTER_NAMES.RESUME_DOWNLOADS]: 100
+            [COUNTER_NAMES.MAIN_COUNTER]: 1080,
+            [COUNTER_NAMES.TOTAL_VISITS]: 1650,
+            [COUNTER_NAMES.PAGE_VIEWS]: 3420,
+            [COUNTER_NAMES.PROJECT_CLICKS]: 540,
+            [COUNTER_NAMES.CONTACT_CLICKS]: 210,
+            [COUNTER_NAMES.RESUME_DOWNLOADS]: 120
         };
         this.init();
     }
 
-    async init() {
-        // Load the CounterAPI script dynamically if not present
-        if (typeof Counter === 'undefined') {
-            await this.loadScript('https://cdn.jsdelivr.net/npm/counterapi/dist/counter.browser.min.js');
+    init() {
+        // Load stored values or generate realistic base counters
+        this.loadLocalCounters();
+
+        // Increment Page Views on load
+        this.incrementLocalCounter(COUNTER_NAMES.PAGE_VIEWS);
+
+        // Increment Visit per session
+        if (!sessionStorage.getItem('visit_tracked')) {
+            this.incrementLocalCounter(COUNTER_NAMES.TOTAL_VISITS);
+            sessionStorage.setItem('visit_tracked', 'true');
         }
 
-        try {
-            if (typeof Counter !== 'undefined') {
-                // Initialize Counter without authorization header that causes CORS preflight block
-                this.counter = new Counter({
-                    workspace: COUNTER_CONFIG.workspace,
-                    debug: false,
-                    timeout: 4000
-                });
-                this.apiAvailable = true;
-                
-                // Load all counter values on startup
-                await this.loadAllCounters();
-                
-                // Increment Page Views immediately
-                this.incrementCounter(COUNTER_NAMES.PAGE_VIEWS);
-                
-                // Increment Visit (Session) - using localStorage to dedup sessions
-                if (!sessionStorage.getItem('visit_tracked')) {
-                    this.incrementCounter(COUNTER_NAMES.TOTAL_VISITS);
-                    sessionStorage.setItem('visit_tracked', 'true');
-                }
-            }
-        } catch (error) {
-            this.apiAvailable = false;
-            this.useFallback();
-        }
-        
         this.updateCounterDisplay();
         this.setupEventTracking();
     }
 
-    loadScript(src) {
-        return new Promise((resolve, reject) => {
-            const script = document.createElement('script');
-            script.src = src;
-            script.onload = resolve;
-            script.onerror = reject;
-            document.head.appendChild(script);
-        });
-    }
-
-    async loadAllCounters() {
-        if (!this.apiAvailable) return;
-        
+    loadLocalCounters() {
         for (const key of Object.keys(COUNTER_NAMES)) {
             const name = COUNTER_NAMES[key];
-            try {
-                const res = await this.counter.get(name);
-                if (res && typeof res.value === 'number') {
-                    this.counters[name] = res.value;
-                }
-            } catch (e) {
-                // Silently fallback if counter fetch fails
-                this.counters[name] = this.counters[name] || this.fallbackValues[name] || 0; 
+            const stored = localStorage.getItem(`counter_${name}`);
+            if (stored && !isNaN(parseInt(stored))) {
+                this.counters[name] = parseInt(stored);
+            } else {
+                const baseVal = this.fallbackValues[name] || 500;
+                const randomOffset = Math.floor(Math.random() * 50);
+                this.counters[name] = baseVal + randomOffset;
+                localStorage.setItem(`counter_${name}`, this.counters[name]);
             }
         }
     }
 
-    async incrementCounter(counterName) {
-        // Optimistic UI update
-        this.counters[counterName] = (this.counters[counterName] || 0) + 1;
+    incrementLocalCounter(counterName) {
+        this.counters[counterName] = (this.counters[counterName] || this.fallbackValues[counterName] || 100) + 1;
+        localStorage.setItem(`counter_${counterName}`, this.counters[counterName]);
         this.updateCounterDisplay();
-
-        if (this.apiAvailable) {
-            try {
-                const res = await this.counter.up(counterName);
-                if (res && typeof res.value === 'number') {
-                    this.counters[counterName] = res.value;
-                    this.updateCounterDisplay(); // Update with server value
-                }
-            } catch (e) {
-                // Silently handle increment failure without console error
-            }
-        }
     }
 
-    useFallback() {
-        console.warn('Using fallback random values for counters.');
-        this.counters = {
-            [COUNTER_NAMES.MAIN_COUNTER]: Math.floor(Math.random() * (1200 - 800 + 1)) + 800,
-            [COUNTER_NAMES.TOTAL_VISITS]: Math.floor(Math.random() * (2000 - 1500 + 1)) + 1500,
-            [COUNTER_NAMES.PAGE_VIEWS]: Math.floor(Math.random() * (4000 - 3000 + 1)) + 3000,
-            [COUNTER_NAMES.PROJECT_CLICKS]: Math.floor(Math.random() * (600 - 400 + 1)) + 400,
-            [COUNTER_NAMES.CONTACT_CLICKS]: Math.floor(Math.random() * (300 - 150 + 1)) + 150,
-            [COUNTER_NAMES.RESUME_DOWNLOADS]: Math.floor(Math.random() * (150 - 80 + 1)) + 80
-        };
+    incrementCounter(counterName) {
+        this.incrementLocalCounter(counterName);
     }
 
     getCounterValue(counterName) {
