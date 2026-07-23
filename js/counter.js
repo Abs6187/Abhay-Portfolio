@@ -43,11 +43,11 @@ class PortfolioCounter {
 
         try {
             if (typeof Counter !== 'undefined') {
+                // Initialize Counter without authorization header that causes CORS preflight block
                 this.counter = new Counter({
                     workspace: COUNTER_CONFIG.workspace,
-                    accessToken: COUNTER_CONFIG.accessToken,
-                    debug: COUNTER_CONFIG.debug,
-                    timeout: COUNTER_CONFIG.timeout
+                    debug: false,
+                    timeout: 4000
                 });
                 this.apiAvailable = true;
                 
@@ -62,11 +62,8 @@ class PortfolioCounter {
                     this.incrementCounter(COUNTER_NAMES.TOTAL_VISITS);
                     sessionStorage.setItem('visit_tracked', 'true');
                 }
-
-                console.log('Portfolio Counter initialized.');
             }
         } catch (error) {
-            console.warn('CounterAPI init failed, using fallback.', error);
             this.apiAvailable = false;
             this.useFallback();
         }
@@ -92,10 +89,12 @@ class PortfolioCounter {
             const name = COUNTER_NAMES[key];
             try {
                 const res = await this.counter.get(name);
-                this.counters[name] = res.value;
+                if (res && typeof res.value === 'number') {
+                    this.counters[name] = res.value;
+                }
             } catch (e) {
-                // If counter doesn't exist, it might be 0 or network error
-                this.counters[name] = this.counters[name] || 0; 
+                // Silently fallback if counter fetch fails
+                this.counters[name] = this.counters[name] || this.fallbackValues[name] || 0; 
             }
         }
     }
@@ -108,10 +107,12 @@ class PortfolioCounter {
         if (this.apiAvailable) {
             try {
                 const res = await this.counter.up(counterName);
-                this.counters[counterName] = res.value;
-                this.updateCounterDisplay(); // Update with server value
+                if (res && typeof res.value === 'number') {
+                    this.counters[counterName] = res.value;
+                    this.updateCounterDisplay(); // Update with server value
+                }
             } catch (e) {
-                console.error(`Failed to increment ${counterName}`, e);
+                // Silently handle increment failure without console error
             }
         }
     }

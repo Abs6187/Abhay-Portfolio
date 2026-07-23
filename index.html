@@ -110,6 +110,11 @@
     }
     </script>
 
+    <!-- Google Fonts Preconnect & Stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" />
+
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/components.css" />
     <link rel="manifest" href="manifest.json" />
@@ -166,7 +171,7 @@
         <!-- HERO SECTION -->
         <div class="hero" style="background-color: transparent;">
             <div>
-                <img class="profile-img" src="./assets/Profile_Photo.jpg" alt="Abhay Gupta Profile Photo" width="180" height="180" loading="eager" />
+                <img class="profile-img" src="./assets/Profile_Photo.jpg" alt="Abhay Gupta Profile Photo" width="180" height="180" loading="eager" fetchpriority="high" />
             </div>
             <h1>Abhay Gupta</h1>
             <h2>Computer Science Student & Developer</h2>
@@ -473,7 +478,7 @@
                         <div class="featured-project-image">
                             <div class="project-placeholder">
                                 <div class="placeholder-content">
-                                    <h4>ReelsPro</h4>
+                                    <div class="placeholder-title" style="font-weight: 700; font-size: 1.2rem;">ReelsPro</div>
                                     <p>AI Video Platform</p>
                                     <div class="placeholder-tech">
                                         <span>Next.js</span>
