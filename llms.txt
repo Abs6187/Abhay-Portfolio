@@ -4,7 +4,12 @@
 
 ## Core Pages
 
-- [Homepage](https://www.abhaygupta6187.me/): Portfolio homepage featuring skills, experience, achievements, and project highlights.
+- [Homepage](https://www.abhaygupta6187.me/): Portfolio homepage featuring skills, experience, achievements, and FAQ.
+- [About Us](https://www.abhaygupta6187.me/about.html): Biography, dual degree background, and scholarship credentials.
+- [Contact Us](https://www.abhaygupta6187.me/contact.html): Contact page with direct secure message form.
+- [Privacy Policy](https://www.abhaygupta6187.me/privacy-policy.html): Privacy policy for AdSense & Google Analytics compliance.
+- [Terms & Conditions](https://www.abhaygupta6187.me/terms.html): Terms and conditions of service.
+- [Technical Setup Guide](https://github.com/Abs6187/Abhay-Portfolio/blob/main/SETUP.md): Infrastructure, GSC, GA4, Vercel & DNS configuration documentation.
 - [ReelsPro Project](https://www.abhaygupta6187.me/project-reelspro.html): HackSRIT'25 1st Prize Winner AI Video Platform with Groq & Gemini AI moderation.
 - [AgentX Travel India Project](https://www.abhaygupta6187.me/project-agentx.html): Multi-Agent AI travel planning assistant built with Streamlit & LangChain.
 - [Helmet Detection Project](https://www.abhaygupta6187.me/project-helmet-detection.html): YOLOv11 real-time safety monitoring computer vision system with 95% accuracy.

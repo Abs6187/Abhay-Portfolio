@@ -1,65 +1,90 @@
-# Portfolio Site - Setup Instructions
+# Abhay Gupta Portfolio — Technical & AI Agent Infrastructure Guide
 
-## Issue Identified
+> **Note for AI Agents & Developers:** This document contains complete context for hosting, domain DNS, Google Search Console, Google Analytics 4 (GA4), WebMCP schema, and MCP server tooling for `abhaygupta6187.me`.
 
-The modular architecture uses JavaScript `fetch()` to load HTML sections dynamically. This **requires a web server** and will not work when opening `index.html` directly via `file://` protocol due to browser CORS security policies.
+---
 
-## Quick Start - Run Local Server
+## 🌐 1. Live Domain & Hosting Setup
 
-Choose one of these methods to run the portfolio:
+- **Production URL:** [https://www.abhaygupta6187.me](https://www.abhaygupta6187.me)
+- **Apex Domain:** [https://abhaygupta6187.me](https://abhaygupta6187.me)
+- **Hosting Platform:** Vercel (Production) & GitHub Pages
+- **Vercel Scope/Team:** `abs6187s-projects`
+- **Vercel Project Name:** `abhay-portfolio`
 
-### Method 1: Python (Recommended)
+### Namecheap Advanced DNS Configuration
+| Record Type | Host | Target / Value | Purpose |
+|---|---|---|---|
+| **A Record** | `@` | `216.198.79.1` | Vercel Anycast IP |
+| **CNAME Record** | `www` | `8f3ebd9ed72e9ea0.vercel-dns-017.com.` | Vercel SSL & Subdomain |
+| **TXT Record** | `@` | `v=spf1 include:spf.efwd.registrar-servers.com ~all` | Namecheap Email Forwarding |
+
+### Deployment Commands
 ```bash
-# Navigate to portfolio directory
-cd c:\Users\conne\Downloads\Portfolio\Abhay-Portfolio
+# Production Deployment to Vercel (Fast deploy via .vercelignore)
+npx vercel --prod --yes --scope abs6187s-projects
 
-# Python 3
+# Run Local Development Server
 python -m http.server 8000
-
-# Then open: http://localhost:8000
 ```
 
-### Method 2: VS Code Live Server
-1. Install "Live Server" extension in VS Code
-2. Right-click `index.html`
-3. Select "Open with Live Server"
+---
 
-### Method 3: Node.js http-server
-```bash
-# Install globally (one time)
-npm install -g http-server
+## 🔍 2. Search Console & GA4 MCP Server Integration (`search-console-mcp`)
 
-# Run in portfolio directory
-http-server -p 8000
+The project is connected to an **MCP (Model Context Protocol) Server** for live SEO, Google Search Console, and GA4 analytics directly inside AI agents.
 
-# Then open: http://localhost:8000
+### Connection Status
+`[ ✔ Google Search Console | ✔ Google Analytics 4 (GA4) | ✘ Bing ]`
+
+### Connected Credentials & Accounts
+- **Google Search Console Account:** `contact2abhaygupta6187@gmail.com`
+- **Authorized GSC Property:** `https://www.abhaygupta6187.me/`
+- **Google Analytics 4 Property ID:** `477182155` (`GA4-477182155`)
+- **GA4 Service Account Email:** `mcp-ga4@kirana-store-abs6187.iam.gserviceaccount.com`
+- **Service Account Key File:** `kirana-store-abs6187-04b99f2911b5.json` *(git ignored)*
+
+### MCP Client Config (`mcpServers`)
+Add this block to your agent's MCP configuration (`mcpServers` JSON):
+
+```json
+{
+  "mcpServers": {
+    "search-console": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "search-console-mcp"
+      ]
+    }
+  }
+}
 ```
 
-## Optimization Recommendations
+---
 
-### 1. Loading State (High Priority)
-Add a loading indicator while sections are being fetched.
+## 📄 3. Page Structure & SEO Compliance
 
-### 2. Error Handling (High Priority)
-Detect `file://` protocol and show helpful message.
+| Page | File | Key Features & Schema |
+|---|---|---|
+| **Homepage** | [`index.html`](file:///c:/Users/conne/Downloads/Abhay-Portfolio/index.html) | ProfilePage JSON-LD, Collapsible FAQ (`<details>`/`<summary>`), FAQPage JSON-LD, Horizontal Stats Counter |
+| **About Us** | [`about.html`](file:///c:/Users/conne/Downloads/Abhay-Portfolio/about.html) | Full bio, achievements, dual degree background (IIT Madras + SRIT) |
+| **Contact Us** | [`contact.html`](file:///c:/Users/conne/Downloads/Abhay-Portfolio/contact.html) | ContactPage JSON-LD, WebMCP `ContactAction` schema, HTTPS FormSubmit handler, Chrome Autofill enabled |
+| **Privacy Policy** | [`privacy-policy.html`](file:///c:/Users/conne/Downloads/Abhay-Portfolio/privacy-policy.html) | AdSense & Google Analytics compliance policy |
+| **Terms & Conditions** | [`terms.html`](file:///c:/Users/conne/Downloads/Abhay-Portfolio/terms.html) | Usage terms & intellectual property policy |
+| **404 Not Found** | [`404.html`](file:///c:/Users/conne/Downloads/Abhay-Portfolio/404.html) | Custom animated error page |
+| **500 Server Error** | [`500.html`](file:///c:/Users/conne/Downloads/Abhay-Portfolio/500.html) | Custom server error page |
+| **Sitemap** | [`sitemap.xml`](file:///c:/Users/conne/Downloads/Abhay-Portfolio/sitemap.xml) | Indexed pages list |
+| **Robots Policy** | [`robots.txt`](file:///c:/Users/conne/Downloads/Abhay-Portfolio/robots.txt) | Bot rules for Googlebot, Bingbot, GPTBot, Claude-Web, PerplexityBot |
+| **AI LLM Summary** | [`llms.txt`](file:///c:/Users/conne/Downloads/Abhay-Portfolio/llms.txt) | Standardized markdown context file for AI crawlers |
 
-### 3. Performance (Medium Priority)
-- Minify section HTML files
-- Add service worker for caching
-- Lazy load below-fold sections
+---
 
-### 4. Fallback Option (Low Priority)
-Create a `index-standalone.html` with all content inlined for offline use.
+## 🤖 4. Useful AI Prompts for Search Console & Traffic Analysis
 
-## Current Status
+AI agents can run these queries using `search-console-mcp`:
 
-- Header and footer: Working
-- Navigation buttons: Non-functional (targets not loaded)
-- All sections: Not visible (CORS blocked)
-- Project pages: Working correctly (no dynamic loading)
-
-## Next Steps
-
-1. Run local server using one of the methods above
-2. Test all functionality
-3. Consider implementing optimizations
+1. *"Find keywords for abhaygupta6187.me ranking positions 8–15 with 1,000+ impressions."*
+2. *"Run opportunity matrix for top pages: high search impressions but low site engagement."*
+3. *"Check keyword cannibalization — are any of my pages competing for the same query?"*
+4. *"Segment search traffic into Brand vs Non-Brand queries for the last 30 days."*
