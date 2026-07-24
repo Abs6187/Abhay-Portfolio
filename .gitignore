@@ -1,3 +1,10 @@
 .env
+.env.*
+*.env
 client_secret*.json
+kirana-store*.json
+*credential*.json
+*service-account*.json
+*.pem
+*.key
 gsc.cmd
