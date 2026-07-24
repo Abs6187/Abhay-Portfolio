@@ -26,7 +26,7 @@
 ## Professional Profiles & Contact
 
 - [GitHub Profile](https://github.com/Abs6187): Open source contributions and repositories.
-- [LinkedIn Profile](https://www.linkedin.com/in/abhay-gupta-0a125a257/): Professional work history and achievements.
+- [LinkedIn Profile](https://www.linkedin.com/in/abhay-gupta-197b17264/): Professional work history and achievements.
 - [Hugging Face Profile](https://huggingface.co/Abs6187): Hosted AI spaces and machine learning models.
 - [Email Contact](mailto:contact2abhaygupta6187@gmail.com): Direct contact email.
 

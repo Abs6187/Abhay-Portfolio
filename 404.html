@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found - Abhay Gupta Portfolio</title>
+    <meta name="description" content="The page you're looking for doesn't exist. Return to Abhay Gupta's portfolio homepage." />
+    <meta name="robots" content="noindex, follow" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" />
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Poppins', sans-serif; background: #101418; color: #e0e0e0; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 24px; }
+        .error-code { font-size: clamp(6rem, 20vw, 10rem); font-weight: 800; color: #FF4500; line-height: 1; margin-bottom: 8px; letter-spacing: -4px; }
+        h1 { font-size: 1.8rem; color: #fff; margin-bottom: 12px; }
+        p { color: #888; max-width: 440px; margin-bottom: 36px; font-size: 1rem; }
+        .btn-group { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+        .btn { padding: 12px 28px; border-radius: 10px; font-family: 'Poppins', sans-serif; font-size: 0.95rem; font-weight: 600; text-decoration: none; transition: all 0.2s; cursor: pointer; }
+        .btn-primary { background: #FF4500; color: #fff; border: 2px solid #FF4500; }
+        .btn-primary:hover { background: #cc3700; border-color: #cc3700; }
+        .btn-outline { background: transparent; color: #ccc; border: 2px solid #333; }
+        .btn-outline:hover { border-color: #FF4500; color: #FF4500; }
+        .glitch { position: relative; }
+        .glitch::before, .glitch::after { content: '404'; position: absolute; top: 0; left: 0; width: 100%; color: #FF4500; }
+        .glitch::before { animation: glitch1 2s infinite; text-shadow: -2px 0 #00ffff; clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%); }
+        .glitch::after { animation: glitch2 2s infinite; text-shadow: 2px 0 #ff00ff; clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%); }
+        @keyframes glitch1 { 0%, 90%, 100% { transform: translate(0); } 95% { transform: translate(-3px, 2px); } }
+        @keyframes glitch2 { 0%, 90%, 100% { transform: translate(0); } 95% { transform: translate(3px, -2px); } }
+    </style>
+</head>
+<body>
+    <div class="error-code glitch">404</div>
+    <h1>Page Not Found</h1>
+    <p>Oops! The page you're looking for doesn't exist or has been moved. Let's get you back on track.</p>
+    <div class="btn-group">
+        <a href="/" class="btn btn-primary">🏠 Go Home</a>
+        <a href="/contact.html" class="btn btn-outline">✉️ Contact Me</a>
+    </div>
+</body>
+</html>
