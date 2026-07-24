@@ -1,0 +1,8 @@
+.git
+.gitignore
+README.md
+SETUP.md
+LICENSE
+*.cmd
+client_secret*.json
+kirana-store*.json
