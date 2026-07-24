@@ -65,9 +65,38 @@
     <!-- LLMs.txt for AI Indexing -->
     <url>
         <loc>https://www.abhaygupta6187.me/llms.txt</loc>
-        <lastmod>2026-07-22</lastmod>
+        <lastmod>2026-07-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+    </url>
+
+    <!-- Legal & Info Pages -->
+    <url>
+        <loc>https://www.abhaygupta6187.me/about.html</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://www.abhaygupta6187.me/contact.html</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://www.abhaygupta6187.me/privacy-policy.html</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+    </url>
+
+    <url>
+        <loc>https://www.abhaygupta6187.me/terms.html</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
     </url>
 
     <!-- Key Profile Asset -->
