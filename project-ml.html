@@ -2,6 +2,14 @@
 <html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P55T83EYE2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-P55T83EYE2');
+    </script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -90,7 +98,7 @@
             </button>
             <nav>
                 <button onclick="location.href='index.html#featured-project'">FEATURED PROJECT</button>
-                <button onclick="location.href='index.html#education'">CONTACT ME</button>
+                <button onclick="location.href='contact.html'">CONTACT ME</button>
             </nav>
         </div>
     </header>
@@ -115,8 +123,18 @@
         </div>
         <div class="project-hero-image">
             <div class="project-showcase">
-                <img src="./assets/projects/vr.png" alt="Machine Learning Projects Showcase" class="project-image" width="600" height="400" loading="eager" />
-            </div>
+                <div class="project-showcase" style="background:linear-gradient(135deg,#1a1a1a 0%,#2d1200 100%);border-radius:14px;padding:2rem;text-align:center;min-height:260px;display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px solid rgba(255,69,0,0.3);">
+                    <div style="font-size:3.5rem;margin-bottom:1rem;">🤖</div>
+                    <h3 style="color:#FF4500;margin:0 0 0.5rem;">ML Projects Collection</h3>
+                    <p style="color:#aaa;margin:0;font-size:0.9rem;">YOLOv11 · Scikit-learn · TensorFlow · PyTorch · Hugging Face</p>
+                    <div style="display:flex;gap:0.6rem;flex-wrap:wrap;justify-content:center;margin-top:1rem;">
+                        <span style="background:rgba(255,69,0,0.15);border:1px solid #FF4500;color:#FF4500;padding:0.2rem 0.7rem;border-radius:20px;font-size:0.78rem;">Computer Vision</span>
+                        <span style="background:rgba(255,69,0,0.15);border:1px solid #FF4500;color:#FF4500;padding:0.2rem 0.7rem;border-radius:20px;font-size:0.78rem;">NLP</span>
+                        <span style="background:rgba(255,69,0,0.15);border:1px solid #FF4500;color:#FF4500;padding:0.2rem 0.7rem;border-radius:20px;font-size:0.78rem;">Deep Learning</span>
+                        <span style="background:rgba(255,69,0,0.15);border:1px solid #FF4500;color:#FF4500;padding:0.2rem 0.7rem;border-radius:20px;font-size:0.78rem;">Published Research</span>
+                    </div>
+                </div>
+
         </div>
     </div>
 
