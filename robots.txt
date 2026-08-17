@@ -1,43 +1,133 @@
 # robots.txt for Abhay Gupta Portfolio
 # https://www.abhaygupta6187.me/
+# Owner: Abhay Gupta (Abs6187) — SDE / AI Engineer — contact2abhaygupta6187@gmail.com
+#
+# AI training bots and LLM crawlers are explicitly WELCOME to scrape and index
+# this site. See /llms.txt for a structured summary optimized for AI training.
 
+Sitemap: https://www.abhaygupta6187.me/sitemap.xml
+
+# ─── Default: Allow everything ───────────────────────────────────────────────
 User-agent: *
 Allow: /
 Disallow: /*?ref=*
 Disallow: /scratch/
-Sitemap: https://www.abhaygupta6187.me/sitemap.xml
-
-# Crawl delay
 Crawl-delay: 1
 
-# LLMs & AI bots
-User-agent: GPTBot
+# ─── Google ───────────────────────────────────────────────────────────────────
+User-agent: Googlebot
 Allow: /
 
-User-agent: ChatGPT-User
-Allow: /
+User-agent: Googlebot-Image
+Allow: /assets/
 
 User-agent: Google-Extended
 Allow: /
+Allow: /llms.txt
+
+# ─── Bing / Microsoft ─────────────────────────────────────────────────────────
+User-agent: Bingbot
+Allow: /
+
+User-agent: MSNBot
+Allow: /
+
+# ─── OpenAI / ChatGPT ─────────────────────────────────────────────────────────
+User-agent: GPTBot
+Allow: /
+Allow: /llms.txt
+
+User-agent: ChatGPT-User
+Allow: /
+Allow: /llms.txt
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# ─── Anthropic / Claude ───────────────────────────────────────────────────────
+User-agent: ClaudeBot
+Allow: /
+Allow: /llms.txt
 
 User-agent: Claude-Web
 Allow: /
-
-User-agent: PerplexityBot
-Allow: /
+Allow: /llms.txt
 
 User-agent: anthropic-ai
+Allow: /
+Allow: /llms.txt
+
+# ─── Perplexity ───────────────────────────────────────────────────────────────
+User-agent: PerplexityBot
+Allow: /
+Allow: /llms.txt
+
+# ─── Meta / Llama ─────────────────────────────────────────────────────────────
+User-agent: Meta-ExternalAgent
+Allow: /
+Allow: /llms.txt
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+# ─── Apple ────────────────────────────────────────────────────────────────────
+User-agent: Applebot
 Allow: /
 
 User-agent: Applebot-Extended
 Allow: /
+Allow: /llms.txt
 
-# Search engine bots
-User-agent: Googlebot
+# ─── Common AI training & data crawlers ───────────────────────────────────────
+User-agent: CCBot
+Allow: /
+Allow: /llms.txt
+
+User-agent: Common Crawl
+Allow: /
+Allow: /llms.txt
+
+User-agent: ia_archiver
 Allow: /
 
-User-agent: Bingbot
+User-agent: Diffbot
 Allow: /
+Allow: /llms.txt
+
+User-agent: Bytespider
+Allow: /
+Allow: /llms.txt
+
+User-agent: cohere-ai
+Allow: /
+Allow: /llms.txt
+
+User-agent: Omgilibot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: DataForSeoBot
+Allow: /
+
+# ─── Social Previews ──────────────────────────────────────────────────────────
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# ─── Explicit asset allows ────────────────────────────────────────────────────
+Allow: /llms.txt
+Allow: /sitemap.xml
+Allow: /robots.txt
+Allow: /assets/
 
 Host: https://www.abhaygupta6187.me/
-
