@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ISL Accessibility and Translation System | Abhay Gupta</title>
+<meta name="description" content="Indian Sign Language accessibility and translation system built with MediaPipe, Scikit-learn, OpenCV, Streamlit, React, and Node.js. Mastek DeepBlue Season 11 National Semi-Finalist.">
+<meta name="author" content="Abhay Gupta">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.abhaygupta6187.me/project-isl-mastek.html">
+<link rel="icon" href="favicon.png">
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="ISL Accessibility and Translation System | Abhay Gupta">
+<meta property="og:description" content="Two-module Indian Sign Language translation and gamified learning platform using computer vision and machine learning.">
+<meta property="og:url" content="https://www.abhaygupta6187.me/project-isl-mastek.html">
+<meta property="og:image" content="https://www.abhaygupta6187.me/assets/projects/isl-mastek-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Abhay Gupta Portfolio">
+<meta property="og:locale" content="en_US">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ISL Accessibility and Translation System | Abhay Gupta">
+<meta name="twitter:description" content="Two-module Indian Sign Language translation and gamified learning platform using computer vision and machine learning.">
+<meta name="twitter:image" content="https://www.abhaygupta6187.me/assets/projects/isl-mastek-og.jpg">
+<meta name="theme-color" content="#FF4500">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"ISL Accessibility and Translation System","applicationCategory":"EducationalApplication","operatingSystem":"Web","url":"https://isl-mastek.streamlit.app/","description":"Indian Sign Language real-time translation and gamified learning system using computer vision and machine learning.","author":{"@type":"Person","name":"Abhay Gupta","url":"https://www.abhaygupta6187.me/"},"sameAs":["https://github.com/Abs6187/ISL_MASTEK","https://isl-mastek.onrender.com/","https://youtu.be/TAf5Z4fR3uI"]}</script>
+<link rel="stylesheet" href="./css/styles.css">
+<link rel="stylesheet" href="./css/components.css">
+<link rel="stylesheet" href="./css/project-pages.css">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P55T83EYE2"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-P55T83EYE2');</script>
+<style>
+  .isl-hero-img { width: 100%; border-radius: 12px; display: block; }
+  .isl-section-img { width: 100%; border-radius: 10px; display: block; margin: 1.5rem 0; box-shadow: 0 4px 24px rgba(255,69,0,0.15); }
+  .isl-img-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin: 1.5rem 0; }
+  @media (max-width: 700px) { .isl-img-grid { grid-template-columns: 1fr; } }
+  .isl-icon-wrap { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+  .isl-icon-wrap img { width: 64px; height: 64px; border-radius: 12px; }
+</style>
+</head>
+<body>
+<header><div class="header-wrapper"><button onclick="location.href='index.html'"><span class="portfolio-h">🔥 Portfolio</span></button><nav><button onclick="location.href='index.html#featured-project'">FEATURED PROJECT</button><button onclick="location.href='contact.html'">CONTACT ME</button></nav></div></header>
+<main>
+
+  <!-- HERO -->
+  <section class="project-hero">
+    <div class="project-hero-content">
+      <div class="project-badge">
+        <span class="achievement-badge">National Semi-Finalist</span>
+        <span class="hackathon-badge">Mastek DeepBlue Season 11</span>
+      </div>
+      <div class="isl-icon-wrap">
+        <img src="./assets/projects/isl-mastek-icon.jpg" alt="ISL Mastek project icon" width="64" height="64" loading="eager">
+        <h1>ISL Accessibility and Translation System</h1>
+      </div>
+      <p class="project-subtitle">Indian Sign Language translation and gamified learning platform using computer vision and machine learning</p>
+      <div class="project-links">
+        <a class="demo-btn" href="https://isl-mastek.streamlit.app/" target="_blank" rel="noopener noreferrer">Translation App</a>
+        <a class="demo-btn" href="https://isl-mastek.onrender.com/" target="_blank" rel="noopener noreferrer">Learning App</a>
+        <a class="github-btn" href="https://github.com/Abs6187/ISL_MASTEK" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="video-btn" href="https://youtu.be/TAf5Z4fR3uI" target="_blank" rel="noopener noreferrer">Demo Video</a>
+      </div>
+    </div>
+    <div class="project-hero-image">
+      <img
+        src="./assets/projects/isl-mastek-hero.jpg"
+        alt="Indian Sign Language translation interface with computer-vision hand landmark detection"
+        class="isl-hero-img"
+        width="1200"
+        height="800"
+        loading="eager"
+        fetchpriority="high"
+      >
+    </div>
+  </section>
+
+  <!-- OVERVIEW -->
+  <section class="project-section">
+    <div class="container">
+      <h2>Project Overview</h2>
+      <p class="lead-text">This two-module assistive system was developed to help bridge real-time communication gaps for the deaf and hard-of-hearing community through Indian Sign Language recognition, translation, and learning tools.</p>
+      <p>The project combines real-time sign alphabet and number recognition with a separate gamified learning experience. It reached the National Semi-Finals of Mastek DeepBlue Season 11 among engineering teams across India.</p>
+
+      <!-- TRANSLATION INTERFACE SCREENSHOT -->
+      <h2>Live Translation Interface</h2>
+      <p>Real-time sign detection with MediaPipe hand landmarks, detected sign output panel, and confidence visualization.</p>
+      <img
+        src="./assets/projects/isl-translation-interface.jpg"
+        alt="ISL real-time translation app showing hand detection bounding box and recognized sign output"
+        class="isl-section-img"
+        width="1600"
+        height="1000"
+        loading="lazy"
+      >
+
+      <!-- BIDIRECTIONAL TRANSLATION -->
+      <h2>Bidirectional Translation Engine</h2>
+      <p>Speech-to-Sign converts spoken English into ISL animations. Text-to-Sign converts typed text into gesture sequences.</p>
+      <img
+        src="./assets/projects/isl-bidirectional-translation.jpg"
+        alt="Bidirectional ISL translation diagram showing Speech and Text inputs converting to ISL sign animations"
+        class="isl-section-img"
+        width="1400"
+        height="800"
+        loading="lazy"
+      >
+
+      <!-- GAMIFIED LEARNING -->
+      <h2>Gamified Learning Platform</h2>
+      <p>Interactive web-based learning with practice exercises, quizzes, achievement badges, and live leaderboards.</p>
+      <img
+        src="./assets/projects/isl-learning-interface.jpg"
+        alt="ISL gamified learning platform showing lesson cards, quiz progress, score summary, achievement badges, and leaderboard"
+        class="isl-section-img"
+        width="1600"
+        height="1000"
+        loading="lazy"
+      >
+
+      <!-- PIPELINE DIAGRAM -->
+      <h2>System Architecture Pipeline</h2>
+      <p>The recognition pipeline flows from camera input through MediaPipe landmark detection, feature extraction, Scikit-learn ML classifier, to the final recognized sign and translation output.</p>
+      <img
+        src="./assets/projects/isl-pipeline.jpg"
+        alt="ISL recognition pipeline diagram: Camera Input, Hand Landmarks, Feature Extraction, ML Classifier, Recognized Sign, Translation Output"
+        class="isl-section-img"
+        width="1400"
+        height="800"
+        loading="lazy"
+      >
+
+      <!-- CORE CAPABILITIES -->
+      <h2>Core Capabilities</h2>
+      <ul>
+        <li>Real-time sign alphabet and number recognition using MediaPipe hand-landmark tracking and Scikit-learn classifiers.</li>
+        <li>Speech-to-Sign conversion from spoken English into sign animations.</li>
+        <li>Text-to-Sign conversion from typed text into ISL gestures.</li>
+        <li>Interactive practice exercises, quizzes, and live score leaderboards.</li>
+      </ul>
+
+      <h2>Technology Stack</h2>
+      <p>Python, MediaPipe, Scikit-learn, OpenCV, Streamlit, PyTorch, React, Node.js, Express.js, and Render.</p>
+
+      <h2>Live Resources</h2>
+      <ul>
+        <li><a href="https://github.com/Abs6187/ISL_MASTEK" target="_blank" rel="noopener noreferrer">ISL Mastek GitHub repository</a></li>
+        <li><a href="https://isl-mastek.streamlit.app/" target="_blank" rel="noopener noreferrer">Live Streamlit translation app</a></li>
+        <li><a href="https://isl-mastek.onrender.com/" target="_blank" rel="noopener noreferrer">Gamified learning web app</a></li>
+        <li><a href="https://youtu.be/TAf5Z4fR3uI" target="_blank" rel="noopener noreferrer">Project demo video</a></li>
+      </ul>
+      <p><a href="index.html" class="back-btn">← Back to Portfolio</a></p>
+    </div>
+  </section>
+
+</main>
+<footer class="footer-wrapper"><p class="footer-p">© 2026 Abhay Gupta. All rights reserved.</p></footer>
+<script src="./js/main.js"></script><script src="./js/components.js"></script>
+</body>
+</html>
