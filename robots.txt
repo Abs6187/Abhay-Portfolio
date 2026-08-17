@@ -1,90 +1,43 @@
 # robots.txt for Abhay Gupta Portfolio
-# This file tells search engines and AI bots how to crawl this website
+# https://www.abhaygupta6187.me/
 
-# Allow all bots to crawl everything
 User-agent: *
 Allow: /
-
-# Sitemap location
+Disallow: /*?ref=*
+Disallow: /scratch/
 Sitemap: https://www.abhaygupta6187.me/sitemap.xml
 
-# LLM-specific indexing file
-# This helps AI bots better understand and index the content
-Allow: /llms.txt
-
-# Crawl delay (optional, helps prevent server overload)
-# Set to 1 second to be respectful
+# Crawl delay
 Crawl-delay: 1
 
-# Allow specific AI/LLM bots
+# LLMs & AI bots
 User-agent: GPTBot
 Allow: /
-Allow: /llms.txt
 
 User-agent: ChatGPT-User
 Allow: /
-Allow: /llms.txt
 
 User-agent: Google-Extended
 Allow: /
-Allow: /llms.txt
 
 User-agent: Claude-Web
 Allow: /
-Allow: /llms.txt
 
 User-agent: PerplexityBot
 Allow: /
-Allow: /llms.txt
 
 User-agent: anthropic-ai
 Allow: /
-Allow: /llms.txt
 
 User-agent: Applebot-Extended
 Allow: /
-Allow: /llms.txt
 
-# Standard search engine bots
+# Search engine bots
 User-agent: Googlebot
 Allow: /
 
 User-agent: Bingbot
 Allow: /
 
-User-agent: Slurp
-Allow: /
-
-User-agent: DuckDuckBot
-Allow: /
-
-User-agent: Baiduspider
-Allow: /
-
-User-agent: YandexBot
-Allow: /
-
-# Explicitly allow project pages
-Allow: /project-*.html
-Allow: /index.html
-
-# Allow all CSS and JS files
-Allow: /css/
-Allow: /js/
-Allow: /assets/
-
-# Allow important files
-Allow: /llms.txt
-Allow: /robots.txt
-Allow: /sitemap.xml
-
-# Disallow nothing - everything is public
-# (This is a portfolio site meant to be fully indexed)
-
-# Host (optional, but recommended for clarity)
 Host: https://www.abhaygupta6187.me/
-
-# Note for AI bots and crawlers:
-# For comprehensive site information optimized for LLMs, see /llms.txt
-# This file contains structured data about the portfolio, projects, and skills
 

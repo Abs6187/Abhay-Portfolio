@@ -151,7 +151,23 @@
         <li><a href="https://isl-mastek.onrender.com/" target="_blank" rel="noopener noreferrer">Gamified learning web app</a></li>
         <li><a href="https://youtu.be/TAf5Z4fR3uI" target="_blank" rel="noopener noreferrer">Project demo video</a></li>
       </ul>
+      <h2>Engineering Approach</h2>
+      <h3>Module 1 — Real-Time Sign Recognition</h3>
+      <p>The recognition module uses <strong>MediaPipe Hands</strong> to extract 21 three-dimensional hand landmark coordinates from a live webcam feed at 30 fps. These 63 floating-point values are normalized relative to the wrist landmark, making the classifier invariant to hand scale and position. A <strong>Scikit-learn Random Forest classifier</strong> trained on a custom dataset of ISL alphabets (A–Z) and numbers (0–9) was then applied to predict the sign in real time. OpenCV handles the frame capture, rendering, and overlay of the landmark skeleton and prediction label on the live video stream.</p>
+      <h3>Module 2 — Bidirectional Translation</h3>
+      <p>The Speech-to-Sign module uses Python's <code>speech_recognition</code> library to capture spoken English and convert it to text. Each word is then matched to an ISL animation sequence stored in a pre-built dictionary. The Text-to-Sign module accepts typed input and performs the same word-to-animation mapping. Both modules are served through a <strong>Streamlit</strong> web interface that requires no installation — users access it in a browser at <a href="https://isl-mastek.streamlit.app/" target="_blank" rel="noopener noreferrer">isl-mastek.streamlit.app</a>.</p>
+      <h3>Gamified Learning Platform</h3>
+      <p>The learning platform was built with <strong>React and Node.js</strong>, deployed on Render. It features lesson cards for each ISL alphabet and number sign, live sign-practice exercises where the webcam verifies the user's gesture, timed quizzes with instant feedback, an XP scoring system, achievement badges, and a live leaderboard. The gamification elements were designed to make ISL accessible to children and first-time learners without formal training.</p>
+
+      <h2>Impact &amp; Recognition</h2>
+      <p>The project was submitted to <strong>Mastek DeepBlue Season 11</strong>, a national-level technology innovation competition for engineering students across India. Out of hundreds of submissions, the ISL Accessibility and Translation System advanced to the <strong>National Semi-Finals</strong>, recognised for its social impact, technical depth, and accessibility-first design philosophy.</p>
+      <p>The system addresses a real communication barrier: approximately <strong>63 million people in India</strong> have significant hearing loss, yet most software tools and public interfaces do not support Indian Sign Language. This project demonstrates how computer vision and machine learning can be applied to build inclusive technology with meaningful societal impact.</p>
+
+      <h2>What I Learned</h2>
+      <p>This project deepened my understanding of computer vision pipelines, real-time ML inference, and accessible web design. Working within the constraints of a hackathon timeline taught me to prioritise ruthlessly, make architectural decisions quickly, and communicate complex technical ideas to a non-technical judging panel. It also reinforced my commitment to building software that solves problems for underrepresented communities.</p>
+
       <p><a href="index.html" class="back-btn">← Back to Portfolio</a></p>
+
     </div>
   </section>
 
