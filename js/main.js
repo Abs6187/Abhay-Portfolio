@@ -142,6 +142,16 @@ function initializeProjects() {
             name: 'Machine Learning Projects',
             image: './assets/projects/vr.png',
             description: 'Various ML applications and Hugging Face deployments'
+        },
+        {
+            name: 'TechSelect Deal Syndication Engine',
+            image: './assets/projects/vr.png',
+            description: 'Automated multi-platform deal aggregation and publishing engine using Next.js, Python, Redis, and AWS'
+        },
+        {
+            name: 'ISL Accessibility and Translation System',
+            image: './assets/projects/vr.png',
+            description: 'Indian Sign Language translation and gamified learning system using computer vision and machine learning'
         }
     ];
 
@@ -236,7 +246,9 @@ function openProjectPage(projectName) {
         'Helmet Detection - YOLOv11': 'project-helmet-detection.html',
         'EduPath Explorer': 'project-edupath.html',
         'JARVIS AI Assistant': 'project-jarvis.html',
-        'Machine Learning Projects': 'project-ml.html'
+        'Machine Learning Projects': 'project-ml.html',
+        'TechSelect Deal Syndication Engine': 'project-techselect.html',
+        'ISL Accessibility and Translation System': 'project-isl-mastek.html'
     };
 
     const pagePath = projectPages[projectName];

@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "web-deployment-mcp-seo": {
+      "source": "Abs6187/web-deployment-mcp-seo",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "c63bd546027c608ef0bcd31a8f1f94a7f7808d3b6536203e8da2ce1f755e913f"
+    }
+  }
+}

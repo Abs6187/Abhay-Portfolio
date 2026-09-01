@@ -19,7 +19,9 @@ const ASSETS_TO_CACHE = [
   './project-helmet-detection.html',
   './project-jarvis.html',
   './project-ml.html',
-  './project-reelspro.html'
+  './project-reelspro.html',
+  './project-techselect.html',
+  './project-isl-mastek.html'
 ];
 
 // Install Event

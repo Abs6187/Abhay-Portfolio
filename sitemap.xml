@@ -4,106 +4,106 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-    <!-- Main Homepage -->
+    <!-- Primary Canonical Homepage -->
     <url>
         <loc>https://www.abhaygupta6187.me/</loc>
-        <lastmod>2026-07-22</lastmod>
-        <changefreq>weekly</changefreq>
+        <lastmod>2026-08-17</lastmod>
+        <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
 
-    <url>
-        <loc>https://www.abhaygupta6187.me/index.html</loc>
-        <lastmod>2026-07-22</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-
-    <!-- Project Pages -->
+    <!-- Key Project Pages -->
     <url>
         <loc>https://www.abhaygupta6187.me/project-agentx.html</loc>
-        <lastmod>2026-07-22</lastmod>
-        <changefreq>monthly</changefreq>
+        <lastmod>2026-08-17</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
         <loc>https://www.abhaygupta6187.me/project-edupath.html</loc>
-        <lastmod>2026-07-22</lastmod>
-        <changefreq>monthly</changefreq>
+        <lastmod>2026-08-17</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
         <loc>https://www.abhaygupta6187.me/project-helmet-detection.html</loc>
-        <lastmod>2026-07-22</lastmod>
-        <changefreq>monthly</changefreq>
+        <lastmod>2026-08-17</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
         <loc>https://www.abhaygupta6187.me/project-jarvis.html</loc>
-        <lastmod>2026-07-22</lastmod>
-        <changefreq>monthly</changefreq>
+        <lastmod>2026-08-17</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
         <loc>https://www.abhaygupta6187.me/project-ml.html</loc>
-        <lastmod>2026-07-22</lastmod>
-        <changefreq>monthly</changefreq>
+        <lastmod>2026-08-17</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
         <loc>https://www.abhaygupta6187.me/project-reelspro.html</loc>
-        <lastmod>2026-07-22</lastmod>
-        <changefreq>monthly</changefreq>
+        <lastmod>2026-08-17</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
 
-    <!-- LLMs.txt for AI Indexing -->
+    <url>
+        <loc>https://www.abhaygupta6187.me/project-techselect.html</loc>
+        <lastmod>2026-08-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://www.abhaygupta6187.me/project-isl-mastek.html</loc>
+        <lastmod>2026-08-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Context Documentation -->
     <url>
         <loc>https://www.abhaygupta6187.me/llms.txt</loc>
-        <lastmod>2026-07-24</lastmod>
-        <changefreq>monthly</changefreq>
+        <lastmod>2026-08-17</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
 
-    <!-- Legal & Info Pages -->
+    <!-- Core Navigation Pages -->
     <url>
         <loc>https://www.abhaygupta6187.me/about.html</loc>
-        <lastmod>2026-07-24</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <lastmod>2026-08-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://www.abhaygupta6187.me/contact.html</loc>
-        <lastmod>2026-07-24</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <lastmod>2026-08-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
     </url>
 
+    <!-- Legal Pages -->
     <url>
         <loc>https://www.abhaygupta6187.me/privacy-policy.html</loc>
-        <lastmod>2026-07-24</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.4</priority>
+        <lastmod>2026-08-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
     </url>
 
     <url>
         <loc>https://www.abhaygupta6187.me/terms.html</loc>
-        <lastmod>2026-07-24</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.4</priority>
-    </url>
-
-    <!-- Key Profile Asset -->
-    <url>
-        <loc>https://www.abhaygupta6187.me/assets/Profile_Photo.jpg</loc>
-        <lastmod>2026-07-22</lastmod>
-        <changefreq>yearly</changefreq>
+        <lastmod>2026-08-17</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
 

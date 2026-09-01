@@ -8,3 +8,5 @@ kirana-store*.json
 *.pem
 *.key
 gsc.cmd
+
+.vercel

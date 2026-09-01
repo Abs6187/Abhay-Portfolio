@@ -92,6 +92,9 @@ A CCTV-based helmet and license plate detection system using YOLOv11 and EasyOCR
 - 🎓 Reliance Foundation Undergraduate Scholarship recipient
 - 🎓 ONGC Scholarship recipient
 - 🌐 TCS CodeVita Round 2 — Global Rank 1374
+- 🥇 CDAC C-CAT Ranks — Category II: Rank 1213 | Category III: Rank 185
+- 🎖️ Successfully completed 5-day SSB (Service Selection Board) evaluation
+- 💼 Selected as Software Development Engineer (SDE) at APMOSYS
 - 🔐 Cisco Certified CyberOps Associate
 - ⚡ Xebia Software Engineering Apprenticeship (industry internship)
 

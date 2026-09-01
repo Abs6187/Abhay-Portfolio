@@ -1,0 +1,28 @@
+{
+  "name": "web-deployment-mcp-seo",
+  "version": "1.0.0",
+  "description": "An extensive agent skill for web deployment automation, DNS troubleshooting, secure WebMCP forms, and Search Console + GA4 MCP integrations.",
+  "main": "SKILL.md",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abs6187/web-deployment-mcp-seo.git"
+  },
+  "keywords": [
+    "agent-skill",
+    "vercel",
+    "dns",
+    "search-console",
+    "ga4",
+    "mcp",
+    "webmcp"
+  ],
+  "author": "Abhay Gupta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Abs6187/web-deployment-mcp-seo/issues"
+  },
+  "homepage": "https://github.com/Abs6187/web-deployment-mcp-seo#readme",
+  "dependencies": {},
+  "devDependencies": {}
+}
