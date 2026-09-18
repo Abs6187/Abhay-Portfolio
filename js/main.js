@@ -241,14 +241,14 @@ function initializeSmoothScrolling() {
 // Open project detail pages
 function openProjectPage(projectName) {
     const projectPages = {
-        'ReelsPro - AI Video Platform': 'project-reelspro.html',
-        'AgentX Travel India': 'project-agentx.html',
-        'Helmet Detection - YOLOv11': 'project-helmet-detection.html',
-        'EduPath Explorer': 'project-edupath.html',
-        'JARVIS AI Assistant': 'project-jarvis.html',
-        'Machine Learning Projects': 'project-ml.html',
-        'TechSelect Deal Syndication Engine': 'project-techselect.html',
-        'ISL Accessibility and Translation System': 'project-isl-mastek.html'
+        'ReelsPro - AI Video Platform': '/project-reelspro',
+        'AgentX Travel India': '/project-agentx',
+        'Helmet Detection - YOLOv11': '/project-helmet-detection',
+        'EduPath Explorer': '/project-edupath',
+        'JARVIS AI Assistant': '/project-jarvis',
+        'Machine Learning Projects': '/project-ml',
+        'TechSelect Deal Syndication Engine': '/project-techselect',
+        'ISL Accessibility and Translation System': '/project-isl-mastek'
     };
 
     const pagePath = projectPages[projectName];

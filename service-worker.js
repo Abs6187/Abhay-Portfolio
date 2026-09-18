@@ -3,8 +3,8 @@ const DYNAMIC_CACHE_NAME = 'abhay-portfolio-dynamic-v2';
 
 const ASSETS_TO_CACHE = [
   './',
-  './index.html',
-  './offline.html',
+  '/',
+  '/offline',
   './css/styles.css',
   './css/components.css',
   './css/project-pages.css',
@@ -14,14 +14,14 @@ const ASSETS_TO_CACHE = [
   './assets/Profile_Photo.jpg',
   './assets/Abhay_Gupta_Resume_2026.pdf',
   './favicon.png',
-  './project-agentx.html',
-  './project-edupath.html',
-  './project-helmet-detection.html',
-  './project-jarvis.html',
-  './project-ml.html',
-  './project-reelspro.html',
-  './project-techselect.html',
-  './project-isl-mastek.html'
+  '/project-agentx',
+  '/project-edupath',
+  '/project-helmet-detection',
+  '/project-jarvis',
+  '/project-ml',
+  '/project-reelspro',
+  '/project-techselect',
+  '/project-isl-mastek'
 ];
 
 // Install Event
@@ -58,7 +58,7 @@ self.addEventListener('fetch', (event) => {
               return response;
             }
             // If not in cache, show offline page
-            return caches.match('./offline.html');
+            return caches.match('/offline');
           });
         })
     );
