@@ -112,7 +112,7 @@ function initializeProjects() {
     const projectsData = [
         {
             name: 'ReelsPro - AI Video Platform',
-            image: './assets/projects/extension.png',
+            image: './assets/projects/Reelspro.png',
             description: 'HackSRIT\'25 Winner - AI-powered short video platform with content moderation',
             featured: true,
             hackathon: 'HackSRIT\'25 - 1st Prize Winner (15,000 INR)',
@@ -135,22 +135,22 @@ function initializeProjects() {
         },
         {
             name: 'JARVIS AI Assistant',
-            image: './assets/projects/gifloader.gif',
+            image: './assets/projects/jarvis-hero.jpg',
             description: 'Just A Rather Very Intelligent System - Voice-controlled AI assistant with multiple capabilities'
         },
         {
             name: 'Machine Learning Projects',
-            image: './assets/projects/vr.png',
+            image: './assets/projects/ML-Projects-Hub.png',
             description: 'Various ML applications and Hugging Face deployments'
         },
         {
             name: 'TechSelect Deal Syndication Engine',
-            image: './assets/projects/vr.png',
+            image: './assets/projects/techselect-hero.jpg',
             description: 'Automated multi-platform deal aggregation and publishing engine using Next.js, Python, Redis, and AWS'
         },
         {
             name: 'ISL Accessibility and Translation System',
-            image: './assets/projects/vr.png',
+            image: './assets/projects/isl-mastek-hero.png',
             description: 'Indian Sign Language translation and gamified learning system using computer vision and machine learning'
         }
     ];
