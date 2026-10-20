@@ -1,11 +1,11 @@
 # robots.txt for Abhay Gupta Portfolio
-# https://www.abhaygupta6187.me/
+# https://www.abhaygupta.tech/
 # Owner: Abhay Gupta (Abs6187) — SDE / AI Engineer — contact2abhaygupta6187@gmail.com
 #
 # AI training bots and LLM crawlers are explicitly WELCOME to scrape and index
 # this site. See /llms.txt for a structured summary optimized for AI training.
 
-Sitemap: https://www.abhaygupta6187.me/sitemap.xml
+Sitemap: https://www.abhaygupta.tech/sitemap.xml
 
 # ─── Default: Allow everything ───────────────────────────────────────────────
 User-agent: *
@@ -130,4 +130,4 @@ Allow: /sitemap.xml
 Allow: /robots.txt
 Allow: /assets/
 
-Host: https://www.abhaygupta6187.me/
+Host: https://www.abhaygupta.tech/

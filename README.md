@@ -178,7 +178,7 @@ This portfolio is created for Abhay Gupta. All rights reserved.
 
 This repository implements expert-level technical Search Engine Optimization (SEO) and automated Google Search Console CLI (`gsc`) integration:
 
-- **Canonical Domain**: [https://www.abhaygupta6187.me/](https://www.abhaygupta6187.me/)
+- **Canonical Domain**: [https://www.abhaygupta.tech/](https://www.abhaygupta.tech/)
 - **Structured Data (Schema.org)**:
   - `Person`, `ProfilePage`, and `WebSite` JSON-LD schemas on `index.html`.
   - `SoftwareApplication`, `CollectionPage`, and `BreadcrumbList` schemas on all project pages.
@@ -199,10 +199,10 @@ gsc doctor
 gsc sitemap list
 
 # Submit sitemap to Google Search Console
-gsc sitemap submit --feedpath https://www.abhaygupta6187.me/sitemap.xml
+gsc sitemap submit --feedpath https://www.abhaygupta.tech/sitemap.xml
 
 # Inspect live URL indexing status
-gsc url inspect --url https://www.abhaygupta6187.me/
+gsc url inspect --url https://www.abhaygupta.tech/
 
 # Query search queries & performance analytics
 gsc analytics query --start-date 2026-07-01 --end-date 2026-07-22 --dimension query
